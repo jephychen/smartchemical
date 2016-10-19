@@ -1,0 +1,405 @@
+/* CSS Document */
+/*register*/
+#top_cart_count{
+	float:right;
+	margin-left:5px;
+}
+div#total_cart
+{
+	text-align:center;
+}
+div#order_page
+{
+	width:1000px;
+	text-align:justify;
+	margin:0 auto;
+}
+div#order_page_header
+{
+	width:100%;
+	height:100px;
+}
+div#order_page_content
+{
+	width:100%;
+	margin:10px 0 70px 0;
+}
+div#order_page_logo
+{
+	float:left;
+	margin-top:20px;
+}
+div#order_page_title
+{
+	float:left;
+	padding:35px 0 0 20px;
+	width:200px;
+}
+span#cart_title_span
+{
+	font-size: 24px;
+	font-weight:500;
+	color:#666666;
+	font-family: "Microsoft YaHei";
+	margin-top:30px;
+}
+#company_logo
+{
+	height:69px;
+	width:188px;
+}
+div#order_page_content
+{
+}
+div#order_page_content_detail{
+	height:40px;
+	margin-bottom:10px;
+}
+div#order_page_content_detail_text{
+	height:32px;
+	margin-left:5px;
+	padding-top:6px;
+	font-size: 18px;
+	font-weight:500;
+	color:#666666;
+	font-family: "Microsoft YaHei";
+}
+div#order_page_content_items{
+	border:1px solid #eaeaea;
+	border-top:4px solid #2672c8;
+}
+div.order_page_item{
+	margin:20px;
+	background-color:#fff;
+	border-bottom:1px solid #eaeaea;
+}
+div.order_page_item_hidden{
+	margin:20px;
+	background-color:#fcfcfc;
+	border-bottom:1px solid #eaeaea;
+	display:none;
+}
+div.order_page_item_total{
+	margin:30px 20px 30px 0;
+	font:12px/150% Arial,Verdana,"\5b8b\4f53";
+	color:#666666;
+}
+.order_page_item_total_line{
+	overflow:hidden;
+	margin:12px 0 12px 0;
+}
+.order_page_item_total_line_hidden{
+	display:none;
+	overflow:hidden;
+	margin:12px 0 12px 0;
+}
+.order_page_item_total_col{
+	font-size:13px;
+	float:right;
+}
+.order_page_item_total_col_right{
+	width:100px;
+	font-size:13px;
+	float:right;
+	text-align:right;
+}
+.order_page_item_text{
+	margin:10px;
+	padding-top:5px;
+	font-size:15px;
+	font-weight:600;
+	color:black;
+}
+.order_page_item_text_left{
+	margin:10px;
+	padding-top:5px;
+	font-size:15px;
+	font-weight:600;
+	color:black;
+	float:left;
+	width:300px;
+}
+.order_page_item_text_right{
+	text-align:right;
+	width:600px;
+	margin:10px;
+	padding-top:5px;
+	font-size:13px;
+	color:blue;
+	float:left;
+}
+.order_page_item_add_address_button{
+	float:right;
+	font:13px/150% Arial,Verdana,"\5b8b\4f53";
+	color:blue;
+}
+.order_page_item_add_address_button:hover{
+	cursor:pointer;
+}
+.order_page_item_detail{
+	overflow:hidden;
+	margin:20px;
+}
+.order_page_item_invoice_detail{
+	overflow:hidden;
+	margin:0 20px 0 20px;
+	width:800px;
+}
+.order_page_item_invoice_detail_hidden{
+	display:none;
+	overflow:hidden;
+	margin:0 20px 0 20px;
+	width:800px;
+}
+.order_page_logistic_wrapper{
+	overflow:hidden;
+}
+.order_page_button_regular_selected{
+	float:left;
+	height:22px;
+	width:100px;
+	text-align:center;
+	margin:0 8px 0 0;
+	font-family: "Microsoft YaHei";
+	padding-top:5px;
+	font-size:13px;
+	border:2px solid #E5511D;
+}
+.order_page_button_regular_selected{
+	cursor:pointer;
+}
+.order_page_button_regular{
+	float:left;
+	height:22px;
+	width:100px;
+	text-align:center;
+	margin:0 8px 0 0;
+	font-family: "Microsoft YaHei";
+	padding-top:5px;
+	font-size:13px;
+	border:2px solid #eaeaea;
+}
+.order_page_button_regular:hover{
+	border:2px solid #FFE4D0;
+	cursor:pointer;
+}
+.order_page_button_large_selected{
+	float:left;
+	height:22px;
+	width:150px;
+	text-align:center;
+	margin:0 15px 0 0;
+	font-family: "Microsoft YaHei";
+	padding-top:5px;
+	font-size:13px;
+	border:2px solid #E5511D;
+}
+.order_page_button_large_selected{
+	cursor:pointer;
+}
+.order_page_button_large{
+	float:left;
+	height:22px;
+	width:150px;
+	text-align:center;
+	margin:0 15px 0 0;
+	font-family: "Microsoft YaHei";
+	padding-top:5px;
+	font-size:13px;
+	border:1px solid #eaeaea;
+}
+.order_page_button_large:hover{
+	border:1px solid #E5511D;
+	cursor:pointer;
+}
+.order_page_item_address_wrapper{
+	overflow:hidden;
+	margin:0 0 12px 0;
+}
+.order_page_item_address_wrapper_hidden{
+	display:none;
+}
+.order_page_item_address_content_wrapper{
+	overflow:hidden;
+	padding-left:10px;
+}
+.order_page_item_address_content_wrapper:hover{
+	background-color:#fff8e1;
+}
+.order_page_item_address_content_wrapper:hover > .order_page_item_address_content_right{
+	display:block;
+}
+.order_page_item_address_content{
+	float:left;
+	font-size:13px;
+	margin-top:8px;
+	margin-bottom:7px;
+}
+.order_page_item_invoice_content{
+	margin-left:20px;
+	color:blue;
+	float:left;
+	font-size:13px;
+	margin-top:8px;
+	margin-bottom:7px;
+}
+.order_page_item_invoice{
+	float:left;
+	font-size:13px;
+	margin-top:8px;
+	margin-bottom:7px;
+}
+.order_page_item_address_content_right{
+	float:right;
+	font-size:13px;
+	margin:8px 10px 7px 0;
+	display:none;
+	cursor:pointer;
+}
+.order_page_item_address_more{
+	font-size:13px;
+	margin:15px 0 0 0;
+}
+.order_page_item_address_more:hover{
+	cursor:pointer;
+}
+.order_page_item_address_more_hidden{
+	display:none;
+}
+.order_page_payment{
+	padding:0 20px 23px 23px;
+	width:340px;
+	float:left;
+	overflow:hidden;
+}
+.order_page_payment_tip_wrapper{
+	width:328px;
+	float:left;
+}
+.order_page_payment_tip{
+	margin-top:15px;
+	padding-top:15px;
+	border-top:1px solid #eaeaea;
+	font-family: "Microsoft YaHei";
+	font-size:13px;
+}
+.order_page_product_list{
+	float:left;
+	overflow:hidden;
+	border-left:1px solid #eaeaea;
+}
+.order_page_product_item{
+	margin:0 0 5px 10px;
+	padding:7px;
+	height:83px;
+	width:510px;
+	background-color:#f3fbfe;
+}
+.order_page_product_item_img{
+	height:80px;
+	width:92px;
+}
+.order_page_product_item_img_col{
+	float:left;
+}
+.order_page_product_link_wrapper{
+	margin:5px;
+}
+.order_page_product_link_warehouse_wrapper{
+	margin:5px;
+}
+div.order_page_product_price_wrapper{
+	margin-top:5px;
+}
+div.order_page_product_operation_wrapper{
+	margin-top:8px;
+	margin-left:3px;
+}
+.order_page_font_gray{
+	color:black;
+	font-family: "Microsoft YaHei";
+}
+.order_page_font_red{
+	color:red;
+	font-family: "Microsoft YaHei";
+}
+.order_page_product_item_product_name_col{
+	float:left;
+	width:250px;
+}
+.order_page_product_item_price_col{
+	width:100px;
+	float:left;
+}
+.order_page_product_item_quantity_col{
+	float:left;
+}
+div#order_page_content_submit{
+	height:40px;
+	margin-top:10px;
+	border:1px solid #eaeaea;
+}
+div#submit_button{
+	height:33px;
+	width:100px;
+	padding-top:7px;
+	font-family: "Microsoft YaHei";
+	font-size:18px;
+	font-weight:500;
+	text-align:center;
+	float:right;
+	color:white;
+	background-color:#E5511D;
+}
+div#submit_button:hover{
+	cursor:pointer;
+}
+div#submit_info{
+	margin-top:10px;
+	margin-right:20px;
+	text-align:center;
+	font-size:13px;
+	color:#666666;
+	float:right;
+	font-family: "Microsoft YaHei";
+}
+.submit_info_red{
+	color:red;
+	font-size:15px;
+	font-weight:500;
+}
+div#footer_cart
+{
+	float:left;
+	margin-top:100px;
+	position:relative;
+	width:inherit;
+	height:180px;
+	border-top:double #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+}
+.depositpay_area{
+	float:left;
+	margin-top:15px;
+}
+.depositpay_text{
+	font-size:14px;
+	font-family: "Microsoft YaHei";
+	margin:5px 0 5px 0;
+}
+.depositpay_checkbox_icon{
+	float:left;
+}
+.depositpay_checkbox{
+	margin-top:2px;
+	float:left;
+	font-size:13px;
+	font-family: "Microsoft Songti";
+}
+.recharge_button{
+	color:red;
+	font-family: "Microsoft YaHei";
+}
+.recharge_button:hover{
+	cursor:pointer;
+}

@@ -1,0 +1,173 @@
+/* CSS Document */
+/*register*/
+div#total_login
+{
+	text-align:center;
+	background-color:#F1F1F1;
+	padding-bottom:200px;
+}
+div#login_pad
+{
+	width:1100px;
+	text-align:justify;
+	margin:0 auto;
+}
+div#login_pad_header
+{
+	width:100%;
+	height:100px;
+}
+div#login_pad_content
+{
+	width:100%;
+	margin:10px 0 70px 0;
+}
+div#login_pad_logo
+{
+	float:left;
+	margin-top:20px;
+}
+div#login_pad_title
+{
+	float:left;
+	padding:35px 0 0 20px;
+	width:200px;
+}
+span#login_title_span
+{
+	font-size: 24px;
+	font-weight:500;
+	color:#666666;
+	font-family: "Microsoft YaHei";
+	margin-top:30px;
+}
+#login_logo
+{
+	height:61px;
+	width:200px;
+}
+div#login_pad_content
+{
+	height:420px;
+}
+div#login_pad_left
+{
+	height:100%;
+	width:60%;
+	float:left;
+}
+div#login_pad_right
+{
+	height:100%;
+	width:390px;
+	float:right;
+}
+div#login_pad_window
+{
+	margin:20px 0 0 0;
+	height:340px;
+	width:100%;
+	background-color:white;
+}
+div#login_pad_window_title
+{
+	font-size: 23px;
+	font-family: "Microsoft YaHei";
+	font-weight:500;
+	color:black;
+	height:60px;
+	width:150px;
+	float:left;
+	padding:30px 0 0 36px;
+}
+div#login_pad_window_title2
+{
+	font-size: 13px;
+	font-family: "Microsoft YaHei";
+	text-align:left;
+	color:black;
+	height:30px;
+	width:130px;
+	float:right;
+	margin-right:40px;
+	padding:43px 0 0 0;
+}
+li.login_pad_window_item
+{
+	list-style:none;
+	margin:20px 0 15px 45px;
+}
+li.login_pad_window_tool_bar
+{
+	list-style:none;
+	height:20px;
+	margin:0 0 10px 45px;
+}
+.login_pad_window_item_input
+{
+	height:35px;
+	width:300px;
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+}
+div.login_pad_window_login_button
+{
+	height:22px;
+	width:281px;
+	border:1px solid #eaeaea;
+	background-color:#E5511D;
+	font-family: "Microsoft YaHei";
+	font-size:16px;
+	font-weight:500;
+	text-align:center;
+	padding:10px;
+	margin-top:4px;
+	color:white;
+	border-radius:5px;
+}
+div.login_pad_window_login_button:hover
+{
+	cursor:pointer;
+}
+div.login_pad_window_item_autologin_forget
+{
+	font-family: "Microsoft YaHei";
+	font-size:13px;
+	margin-top:0;
+	margin-right:20px;
+	width:80px;
+	float:right;
+}
+div.login_pad_window_item_autologin_checkbox
+{
+	margin-top:0;
+	width:20px;
+	float:left;
+}
+div.login_pad_window_item_autologin_text
+{
+	font-family: "Microsoft YaHei";
+	font-size:13px;
+	margin-top:0;
+	width:100px;
+	float:left;
+}
+div.login_result_tip
+{
+	font-family: "Microsoft YaHei";
+	color:red;
+}
+div.login_result_tip_hidden
+{
+	font-family: "Microsoft YaHei";
+	color:red;
+	display:none;
+}
+div#footer_login
+{
+	position:relative;
+	width:inherit;
+	height:180px;
+	border-top:double #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+}

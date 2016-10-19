@@ -1,0 +1,71 @@
+div#MainPromotionBanner{
+	width: 100%;
+	height: 300px;
+	background:#feb900;
+}
+#MainPromotionBanner #SlidePlayer {
+	position:relative;
+	margin: 0 auto;
+}
+#MainPromotionBanner .Slides{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	height: 300px;
+	overflow: hidden;
+}
+#MainPromotionBanner .Slides li {
+	float: left;
+	width: 100%;
+	height: 300px;
+}
+
+#MainPromotionBanner .Slides img{
+	display: block;
+	width: 100%;
+	height: 300px;	
+}
+
+#MainPromotionBanner .SlideTriggers{
+	margin: 0;
+	padding: 0;
+	list-style: none; 
+	position: absolute; 
+	top: 260px;
+	right:40px;
+	z-index: 10;
+	height: 25px;	
+}
+#MainPromotionBanner .SlideTriggers li{
+	float: left;
+	display: inline;
+	color: #E5511D;
+	text-align: center;
+	line-height:16px;
+	width: 16px;
+	height: 16px;
+	font-family: Arial;
+	font-size: .9em;
+	cursor: pointer;
+	overflow: hidden; 
+	margin:3px 6px;
+	border-radius:5px;
+	border:1px solid #E5511D;
+}
+#MainPromotionBanner .SlideTriggers li.Current{ 
+	float: left;
+	display: inline;
+	color: white;
+	text-align: center;
+	line-height:16px;
+	width: 16px;
+	height: 16px;
+	font-family: Arial;
+	font-size: .9em;
+	cursor: pointer;
+	overflow: hidden; 
+	margin:3px 6px;
+	border-radius:5px;
+	background-color:#E5511D;
+	border:1px solid #E5511D;
+}

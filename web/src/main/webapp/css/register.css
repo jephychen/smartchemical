@@ -1,0 +1,436 @@
+/* CSS Document */
+/*register*/
+div#total_register
+{
+	text-align:center;
+	background-color:#F1F1F1;
+}
+div#register_pad
+{
+	width:1100px;
+	text-align:justify;
+	margin:0 auto;
+}
+div#register_pad_header
+{
+	width:100%;
+	height:100px;
+}
+div#register_pad_content
+{
+	width:100%;
+	margin:10px 0 70px 0;
+	background-color:white;
+	position:relative;
+}
+div#register_pad_logo
+{
+	float:left;
+	margin-top:20px;
+}
+div#register_pad_title
+{
+	float:left;
+	padding:35px 0 0 20px;
+	width:200px;
+}
+span#register_title_span
+{
+	font-size: 24px;
+	font-weight:500;
+	color:#666666;
+	font-family: "Microsoft YaHei";
+	margin-top:30px;
+}
+#register_logo
+{
+	height:61px;
+	width:200px;
+}
+div#register_pad_type
+{
+	height:40px;
+	background-color:#F1F1F1;
+}
+div.register_pad_table
+{
+	min-height:500px;
+}
+div.register_pad_table_hidden
+{
+	position:relative;
+	display:none;
+}
+div.register_pad_table_success
+{
+	position:relative;
+	height:420px;
+}
+div.register_pad_table_success_hidden
+{
+	position:relative;
+	height:320px;
+	display:none;
+}
+div.register_result
+{
+	position:relative;
+	height:100px;
+	padding-left:470px;
+	padding-top:167px;
+}
+.register_result_font
+{
+	font-size: 30px;
+	font-weight:500;
+	font-family: "Microsoft YaHei";
+}
+.register_result_icon
+{
+	position:absolute;
+	top:160px;
+	left:395px;
+}
+ul.register_pad_type_ul
+{
+	margin-left:30px;
+}
+li.register_pad_type_li
+{
+	list-style:none;
+	float:left;
+}
+div.register_pad_type_item
+{
+	height:30px;
+	width:140px;
+	font-size: 15px;
+	font-weight:500;
+	color:#666666;
+	text-align:center;
+	padding-top:6px;
+	margin:0 4px 0 4px;
+	background-color:white;
+	border:1px solid #eaeaea;
+	border-top:3px solid #eaeaea;
+	font-family: "Microsoft YaHei";
+}
+div.register_pad_type_item:hover
+{
+	cursor:pointer;
+	background-color:#F1F1F1;
+}
+div.register_pad_type_item_selected
+{
+	height:30px;
+	width:140px;
+	font-size: 15px;
+	font-weight:500;
+	text-align:center;
+	padding-top:6px;
+	margin:0 4px 0 4px;
+	background-color:white;
+	border:1px solid #eaeaea;
+	font-family: "Microsoft YaHei";
+	color:#2672c8;
+	border-top:3px solid #2672c8;
+}
+div.register_pad_table_title
+{
+	margin-bottom:20px;
+	width:65%;
+	overflow:hidden;
+}
+div.register_pad_table_title_text
+{
+	font-size: 14px;
+	font-weight:500;
+	color:black;
+	margin:28px 0 0 50px;
+	font-family: "Microsoft YaHei";
+}
+.register_pad_table_title_subtext
+{
+	font-size:10px;
+}
+div.register_pad_form
+{
+	width:65%;
+	padding-bottom:80px;
+}
+div.register_pad_form1
+{
+	width:65%;
+	padding-bottom:140px;
+}
+div.register_pad_form_hidden
+{
+	display:none;
+	width:65%;
+	padding-bottom:40px;
+}
+div.register_pad_right
+{
+	right:0;
+	top:80px;
+	height:300px;
+	width:34%;
+	position:absolute;
+	border-left:2px dotted #eaeaea;
+}
+div.register_pad_right_title
+{
+	height:30px;
+	margin:30px 0 0 50px;
+}
+.register_pad_right_title_text
+{
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+	font-weight:500;
+	color:black;
+}
+ul.register_pad_right_content_ul
+{
+	margin:0 0 0 50px;
+}
+li.register_pad_right_content_li
+{
+	list-style:none;
+	font-family: "Microsoft YaHei";
+	font-size: 13px;
+	margin:5px;
+}
+li.register_pad_form_item
+{
+	list-style:none;
+	height:40px;
+	margin-bottom:8px;
+}
+li.register_pad_form_item_hidden
+{
+	list-style:none;
+	height:40px;
+	margin-bottom:8px;
+	display:none;
+}
+div.register_pad_form_item_left
+{
+	height:100%;
+	width:25%;
+	float:left;
+}
+div.register_pad_form_item_text
+{
+	margin:9px 10px 0 0;
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+	color:#666666;
+	float:right;
+}
+div.register_pad_form_item_middle
+{
+	height:100%;
+	width:300px;
+	float:left;
+	text-align:center;
+}
+div.register_pad_form_item_middle_text
+{
+	font-family: "Microsoft YaHei";
+	font-size:14px;
+	color:#2672c8;
+	margin-top:9px;
+	width:220px;
+	float:left;
+}
+div.register_pad_form_item_middle_checkbox
+{
+	margin-top:9px;
+	width:20px;
+	float:left;
+}
+div.register_pad_form_item_middle_submit
+{
+	height:30px;
+	width:99%;
+	border:1px solid #eaeaea;
+	background-color:#E5511D;
+	font-family: "Microsoft YaHei";
+	font-size:14px;
+	font-weight:500;
+	text-align:center;
+	padding-top:10px;
+	margin-top:4px;
+	color:white;
+	border-radius:5px;
+}
+div.register_pad_form_item_middle_submit:hover
+{
+	cursor:pointer;
+}
+div.register_pad_form_item_right
+{
+	margin-left:10px;
+	height:35px;
+	width:31%;
+	float:left;
+}
+div.register_pad_form_item_right_legal
+{
+	margin-left:10px;
+	height:35px;
+	width:31%;
+	float:left;
+}
+div.register_pad_form_item_right_illegal
+{
+	margin-left:10px;
+	height:35px;
+	width:31%;
+	float:left;
+	background-color:#ffebeb;
+	border:1px solid #fcbdbd;
+}
+div.register_pad_form_item_right_hidden
+{
+	height:35px;
+	width:31%;
+	float:left;
+	display:none;
+}
+div.register_pad_form_item_right_legal_hidden
+{
+	height:35px;
+	width:31%;
+	float:left;
+	display:none;
+}
+div.register_pad_form_item_right_illegal_hidden
+{
+	height:35px;
+	width:31%;
+	float:left;
+	background-color:#ffebeb;
+	border:1px solid #fcbdbd;
+	display:none;
+}
+.register_form_item_tip_red
+{
+	margin-top:10px;
+	float:left;
+	font-family: "Microsoft YaHei";
+	font-size:12px;
+	color:red;
+}
+img.register_form_item_tip_icon
+{
+	margin:8px 4px 0 4px;
+	float:left;
+	height:19px;
+	width:20px;
+}
+.register_pad_form_item_input
+{
+	height:30px;
+	width:296px;
+	font-size:14px;
+	margin-top:1px;
+}
+.register_pad_form_item_text_verifycode
+{
+	height:30px;
+	width:150px;
+	font-size:14px;
+	margin-top:1px;
+	float:left;
+}
+.register_pad_form_item_verifycode
+{
+	height:30px;
+	width:150px;
+	font-size:14px;
+	margin-top:1px;
+	float:left;
+}
+#register_pad_form_item_getverifycode_button
+{
+	height:35px;
+	width:130px;
+	font-family: "Microsoft YaHei";
+	font-size:13px;
+	font-weight:500;
+	margin-top:1px;
+	float:right;
+	color:#666666;
+	border:1px solid #eaeaea;
+	background-color:#eaeaea;
+	border-radius:3px;
+	cursor:pointer;
+}
+img#register_pad_form_item_verifycode_img
+{
+	float:right;
+	height:25px;
+	margin:10px 6px 0 12px;
+}
+div#register_pad_form_item_change_code
+{
+	font-family: "Microsoft YaHei";
+	font-size:14px;
+	font-weight:500;
+	color:#2672c8;
+	float:right;
+	margin:16px 0 0 5px;
+}
+div#footer_register
+{
+	position:relative;
+	width:inherit;
+	height:180px;
+	border-top:double #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+}
+.register_pad_upload_license_item{
+	display:block;
+	overflow:hidden;
+	margin:10px 0 0 50px;
+	overflow:hidden;
+}
+.register_pad_upload_input{
+	float:left;
+}
+.register_pad_upload_button{
+	float:left;
+	height:21px;
+	width:80px;
+	padding-top:4px;
+	background-color:#F1F1F1;
+	font-family: "Microsoft YaHei";
+	font-size:13px;
+	text-align:center;
+	border-radius:3px;
+}
+.register_pad_upload_button:hover{
+	cursor:pointer;
+	background-color:#eaeaea;
+}
+.register_pad_img{
+	margin:15px 5px 5px 5px;
+	float:left;
+	overflow:hidden;
+	width:100%;
+}
+.register_pad_img_small{
+	max-height:150px;
+	_width:expression(this.height > 150 ? "150px" : this.height);
+}
+.register_pad_upload_submit{
+	position:absolute;
+	left:200px;
+	bottom:50px;
+	width:300px;
+}
+.register_pad_upload_submit:hover{
+	cursor:pointer;
+}

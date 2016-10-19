@@ -1,0 +1,732 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Chemical</title>
+<link href="./css/frame.css" rel="stylesheet" type="text/css" />
+<link href="./css/order_page.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="./js/order_page.js" charset="UTF-8"></script>
+</head>
+
+<body>
+<div id="top_bar">
+	<div id="top_bar_wrapper">
+		<ul class="top_bar_ul_left">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">保留1</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a hrsef="http://www.baidu.com"><font class="font_gray">保留2</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我是供货商</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">更多</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我的订单</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我的智选</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="cart_icon"><img src="./img/cart.png" /></li>	
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">购物车</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">登录</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">注册</font></a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="total_cart">	
+<div id="total_wrapper">
+	<div id="order_page">
+		<div id="order_page_header">
+			<div id="order_page_logo">
+				<img id="company_logo" src="./img/logo_blue.png" />
+			</div>
+			<div id="order_page_title">
+				<span id="cart_title_span">结算页</span>
+			</div>
+		</div>
+		<div id="order_page_content">
+			<div id="order_page_content_detail">
+				<div id="order_page_content_detail_text">填写并核对订单信息</div>
+			</div>
+			<div id="order_page_content_items">
+				<div class="order_page_item">
+					<div class="order_page_item_text">
+						配送方式
+					</div>
+					<div class="order_page_item_detail">
+						<div class="order_page_logistic_wrapper">
+							<div id="vendor_delivery_button" class="order_page_button_regular_selected" onclick="vendorDeliver()">
+								厂商配送
+							</div>
+							<div id="zhixuan_delivery_button" class="order_page_button_regular" onclick="zhixuanDeliver()">
+								智选物流
+							</div>
+							<div id="get_byuser_button" class="order_page_button_regular" onclick="getByUser()">
+								上门自提
+							</div>
+						</div>
+						<div id="delivery_tip" class="order_page_item_address_more">
+							厂商负责配送，不收取配送费
+						</div>
+					</div>
+				</div>
+				<div id="order_receiver" class="order_page_item">
+					<div class="order_page_item_text">
+						收货人信息
+						<div class="order_page_item_add_address_button" onclick="addAddress()">添加收货人</div>
+					</div>
+					<div id="order_page_item_detail_receivers" class="order_page_item_detail">
+						<div id="1" name="order_page_address" class="order_page_item_address_wrapper">
+							<div id="order_page_address_child1" name="order_page_address_child" class="order_page_button_large_selected" onclick="selectAddress(1)">
+								王自健 四川成都
+							</div>
+							<div class="order_page_item_address_content_wrapper">
+								<div class="order_page_item_address_content">
+									王自健 四川省-成都市-高新区-天府大道中段888号 智选化学公司 库房
+								</div>
+								<div class="order_page_item_address_content_right" onclick="removeAddress(1)">
+									删除
+								</div>
+								<div class="order_page_item_address_content_right" onclick="editAddress(1)">
+									编辑
+								</div>
+							</div>
+						</div>
+						<div id="2" name="order_page_address" class="order_page_item_address_wrapper_hidden">
+							<div id="order_page_address_child2" name="order_page_address_child" class="order_page_button_large"  onclick="selectAddress(2)">
+								李小健 四川成都
+							</div>
+							<div class="order_page_item_address_content_wrapper">
+								<div class="order_page_item_address_content">
+									李小健 四川省-成都市-高新区-天府大道中段888号 智选化学公司 库房
+								</div>
+								<div class="order_page_item_address_content_right" onclick="removeAddress(2)">
+									删除
+								</div>
+								<div class="order_page_item_address_content_right" onclick="editAddress(2)">
+									编辑
+								</div>
+							</div>
+						</div>
+						<div id="3" name="order_page_address" class="order_page_item_address_wrapper_hidden">
+							<div id="order_page_address_child3" name="order_page_address_child" class="order_page_button_large"  onclick="selectAddress(3)">
+								陈小健 四川成都
+							</div>
+							<div class="order_page_item_address_content_wrapper">
+								<div class="order_page_item_address_content">
+									陈小健 四川省-成都市-高新区-天府大道中段888号 智选化学公司 库房
+								</div>
+								<div class="order_page_item_address_content_right" onclick="removeAddress(3)">
+									删除
+								</div>
+								<div class="order_page_item_address_content_right" onclick="editAddress(3)">
+									编辑
+								</div>
+							</div>
+						</div>
+						<div id="address_more_button" class="order_page_item_address_more" onclick="addressMore()">
+							更多地址 <img src="./img/more_down.png" />
+						</div>
+						<div id="address_less_button" class="order_page_item_address_more_hidden" onclick="addressLess()">
+							收起地址 <img src="./img/more_up.png" />
+						</div>
+					</div>
+				</div>
+				<div id="order_getter" class="order_page_item_hidden">
+					<div class="order_page_item_text">
+						提货人信息
+						<div class="order_page_item_add_address_button" onclick="addAddressGetter()">添加提货人</div>
+					</div>
+					<div id="order_page_item_detail_getters" class="order_page_item_detail">
+						<div id="getter1" name="order_page_address_getter" class="order_page_item_address_wrapper">
+							<div id="order_page_address_child_getter1" name="order_page_address_child_getter" class="order_page_button_large_selected" onclick="selectAddressGetter(1)">
+								王自健 18682723765
+							</div>
+							<div class="order_page_item_address_content_wrapper">
+								<div class="order_page_item_address_content">
+									王自健 身份证：510182198644530975 手机：18682723765 车牌号：川A GA123J
+								</div>
+								<div class="order_page_item_address_content_right" onclick="removeAddressGetter(1)">
+									删除
+								</div>
+								<div class="order_page_item_address_content_right" onclick="editAddressGetter(1)">
+									编辑
+								</div>
+							</div>
+						</div>
+						<div id="getter2" name="order_page_address_getter" class="order_page_item_address_wrapper_hidden">
+							<div id="order_page_address_child_getter2" name="order_page_address_child_getter" class="order_page_button_large"  onclick="selectAddressGetter(2)">
+								李小健 18682723765
+							</div>
+							<div class="order_page_item_address_content_wrapper">
+								<div class="order_page_item_address_content">
+									李小健 身份证：510182198644530975 手机：18682723765 车牌号：川A GA123J
+								</div>
+								<div class="order_page_item_address_content_right" onclick="removeAddressGetter(2)">
+									删除
+								</div>
+								<div class="order_page_item_address_content_right" onclick="editAddressGetter(2)">
+									编辑
+								</div>
+							</div>
+						</div>
+						<div id="getter3" name="order_page_address_getter" class="order_page_item_address_wrapper_hidden">
+							<div id="order_page_address_child_getter3" name="order_page_address_child_getter" class="order_page_button_large"  onclick="selectAddressGetter(3)">
+								陈小健 18682723765
+							</div>
+							<div class="order_page_item_address_content_wrapper">
+								<div class="order_page_item_address_content">
+									陈小健 身份证：510182198644530975 手机：18682723765 车牌号：川A GA123J
+								</div>
+								<div class="order_page_item_address_content_right" onclick="removeAddressGetter(3)">
+									删除
+								</div>
+								<div class="order_page_item_address_content_right" onclick="editAddressGetter(3)">
+									编辑
+								</div>
+							</div>
+						</div>
+						<div id="address_more_button_getter" class="order_page_item_address_more" onclick="addressMoreGetter()">
+							更多地址 <img src="./img/more_down.png" />
+						</div>
+						<div id="address_less_button_getter" class="order_page_item_address_more_hidden" onclick="addressLessGetter()">
+							收起地址 <img src="./img/more_up.png" />
+						</div>
+					</div>
+				</div>
+				<div class="order_page_item">
+					<div class="order_page_item_text">
+						支付方式/配送清单
+					</div>
+					<div class="order_page_item_detail">
+						<div class="order_page_payment">
+							<div id="order_page_payment_onlinepay" class="order_page_button_regular_selected" onclick="onlinePay()">
+								在线支付
+							</div>
+							<div id="order_page_payment_transfer" class="order_page_button_regular" onclick="transferPay()">
+								银行转账
+							</div>
+							<!--<div id="order_page_payment_acceptance_bill" class="order_page_button_regular" onclick="acceptanceBill()">
+								银行承兑
+							</div>-->
+							<div class="depositpay_area">
+								<div class="depositpay_text">当前智选账户余额：<font class="font_red">10000.00</font>元 &nbsp&nbsp&nbsp&nbsp <font id="recharge_button_id" class="recharge_button">充值</font></div>
+								<input class="depositpay_checkbox_icon" type="checkbox" onclick="depositPaySelect(this, 10000)" ><div class="depositpay_checkbox">使用余额支付</div></input>
+							</div>
+							<div class="order_page_payment_tip_wrapper">
+								<div id="order_page_payment_tip" class="order_page_payment_tip">
+									直接网上支付，即时到账。支持绝大多数银行。推荐使用此付款方式。
+								</div>
+							</div>
+						</div>
+						<div class="order_page_product_list">
+							<div class="order_page_product_item">
+								<div class="order_page_product_item_img_col">
+									<img class="order_page_product_item_img" src="./img/product_pics/LR-108.png" />
+								</div>
+								<div class="order_page_product_item_product_name_col">
+									<div class="order_page_product_link_wrapper">
+										<a class="order_page_product_link_wrapper" href="www.baidu.com"><font class="order_page_font_gray">钛白粉LR-972 二氧化钛　TiO2</font></a>
+									</div>
+									<div class="order_page_product_link_wrapper">
+										<a class="order_page_product_link_wrapper" href="www.baidu.com"><font class="order_page_font_gray">佰利联化学</font></a>
+									</div>
+									<div class="order_page_product_link_wrapper">
+										<a class="order_page_product_link_wrapper" href="www.baidu.com"><font class="order_page_font_red">仓库：四川成都高新区天府大道中段888号</font></a>
+									</div>
+								</div>
+								<div class="order_page_product_item_price_col">
+									<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">￥12000</div></font>
+								</div>
+								<div class="order_page_product_item_quantity_col">
+									<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">1.0 吨</div></font>
+								</div>
+							</div>
+							<div class="order_page_product_item">
+								<div class="order_page_product_item_img_col">
+									<img class="order_page_product_item_img" src="./img/product_pics/LR-108.png" />
+								</div>
+								<div class="order_page_product_item_product_name_col">
+									<div class="order_page_product_link_wrapper">
+										<a class="order_page_product_link_wrapper" href="www.baidu.com"><font class="order_page_font_gray">钛白粉LR-972 二氧化钛　TiO2</font></a>
+									</div>
+									<div class="order_page_product_link_wrapper">
+										<a class="order_page_product_link_wrapper" href="www.baidu.com"><font class="order_page_font_gray">佰利联化学</font></a>
+									</div>
+								</div>
+								<div class="order_page_product_item_price_col">
+									<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">￥12000</div></font>
+								</div>
+								<div class="order_page_product_item_quantity_col">
+									<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">1.0 吨</div></font>
+								</div>
+							</div>
+							<div class="order_page_product_item">
+								<div class="order_page_product_item_img_col">
+									<img class="order_page_product_item_img" src="./img/product_pics/LR-108.png" />
+								</div>
+								<div class="order_page_product_item_product_name_col">
+									<div class="order_page_product_link_wrapper">
+										<a class="order_page_product_link_wrapper" href="www.baidu.com"><font class="order_page_font_gray">钛白粉LR-972 二氧化钛　TiO2</font></a>
+									</div>
+									<div class="order_page_product_link_wrapper">
+										<a class="order_page_product_link_wrapper" href="www.baidu.com"><font class="order_page_font_gray">佰利联化学</font></a>
+									</div>
+								</div>
+								<div class="order_page_product_item_price_col">
+									<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">￥12000</div></font>
+								</div>
+								<div class="order_page_product_item_quantity_col">
+									<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">1.0 吨</div></font>
+								</div>
+							</div>
+							<div class="order_page_product_item">
+								<div class="order_page_product_item_img_col">
+									<img class="order_page_product_item_img" src="./img/product_pics/LR-108.png" />
+								</div>
+								<div class="order_page_product_item_product_name_col">
+									<div class="order_page_product_link_wrapper">
+										<a class="order_page_product_link_wrapper" href="www.baidu.com"><font class="order_page_font_gray">钛白粉LR-972 二氧化钛　TiO2</font></a>
+									</div>
+									<div class="order_page_product_link_wrapper">
+										<a class="order_page_product_link_wrapper" href="www.baidu.com"><font class="order_page_font_gray">佰利联化学</font></a>
+									</div>
+								</div>
+								<div class="order_page_product_item_price_col">
+									<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">￥12000</div></font>
+								</div>
+								<div class="order_page_product_item_quantity_col">
+									<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">1.0 吨</div></font>
+								</div>
+							</div>
+							<div class="order_page_product_item">
+								<div class="order_page_product_item_img_col">
+									<img class="order_page_product_item_img" src="./img/product_pics/LR-108.png" />
+								</div>
+								<div class="order_page_product_item_product_name_col">
+									<div class="order_page_product_link_wrapper">
+										<a class="order_page_product_link_wrapper" href="www.baidu.com"><font class="order_page_font_gray">钛白粉LR-972 二氧化钛　TiO2</font></a>
+									</div>
+									<div class="order_page_product_link_wrapper">
+										<a class="order_page_product_link_wrapper" href="www.baidu.com"><font class="order_page_font_gray">佰利联化学</font></a>
+									</div>
+								</div>
+								<div class="order_page_product_item_price_col">
+									<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">￥12000</div></font>
+								</div>
+								<div class="order_page_product_item_quantity_col">
+									<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">1.0 吨</div></font>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="order_page_item">
+					<div class="order_page_item_text_left">
+						发票信息
+					</div>
+					<div class="order_page_item_text_right">
+						修改
+					</div>
+					<div class="order_page_item_invoice_detail">
+						<div class="order_page_item_address_content">
+							<div class="order_page_invoice_info">发票类型：</div><div id="order_page_invoice_div" class="order_page_invoice_info_right">普通发票</div>
+						</div>
+					</div>
+					<div class="order_page_item_invoice_detail">
+						<div class="order_page_item_address_content">
+							<div class="order_page_invoice_info">公司名：</div><div id="order_page_invoice_div" class="order_page_invoice_info_right">XXX公司</div>
+						</div>
+					</div>
+					<div class="order_page_item_invoice_detail">
+						<div class="order_page_item_address_content">
+							<div class="order_page_invoice_info">开户名：</div><div id="order_page_invoice_div" class="order_page_invoice_info_right">中兴通讯股份有限公司</div>
+						</div>
+					</div>
+					<div class="order_page_item_invoice_detail">
+						<div class="order_page_item_address_content">
+							<div class="order_page_invoice_info">开户银行：</div><div id="order_page_invoice_div" class="order_page_invoice_info_right">中兴建设银行</div>
+						</div>
+					</div>
+					<div class="order_page_item_invoice_detail">
+						<div class="order_page_item_address_content">
+							<div class="order_page_invoice_info">地址：</div><div id="order_page_invoice_div" class="order_page_invoice_info_right">中国·成都·天府创新中心</div>
+						</div>
+					</div>
+					<div class="order_page_item_invoice_detail">
+						<div class="order_page_item_address_content">
+							<div class="order_page_invoice_info">纳税人识别号：</div><div id="order_page_invoice_div" class="order_page_invoice_info_right">12312313213235435</div>
+						</div>
+					</div>
+					<div class="order_page_item_invoice_detail">
+						<div class="order_page_item_address_content">
+							<div class="order_page_invoice_info">电话：</div><div id="order_page_invoice_div" class="order_page_invoice_info_right">12312313254</div>
+						</div>
+					</div>
+					<div class="order_page_item_invoice_detail">
+						&nbsp;
+					</div>
+				</div>
+				<div class="order_page_item_total">
+					<div class="order_page_item_total_line">
+						<div class="order_page_item_total_col_right">
+							<div class="float_right">20000.0</div>
+							<div class="float_right">￥</div>
+						</div>
+						<div class="order_page_item_total_col">
+							<div class="float_right">件商品，总价：</div>
+							<div class="font_red float_right">2&nbsp;</div> 
+						</div>
+					</div>
+					<div class="order_page_item_total_line">
+						<div class="order_page_item_total_col_right">
+							<div class="float_right">200.0</div>
+							<div class="float_right">￥</div>
+						</div>
+						<div class="order_page_item_total_col">
+							物流费用：
+						</div>
+					</div>
+					<div class="order_page_item_total_line">
+						<div class="order_page_item_total_col_right">
+							<div class="float_right">20200.0</div>
+							<div class="float_right">￥</div>
+						</div>
+						<div class="order_page_item_total_col">
+							应付总额：
+						</div>
+					</div>
+				</div>
+				<div class="order_page_item">
+					<div id="order_page_content_submit">
+						<div id="submit_button" onclick="openConfirmDialog()">
+							提交订单
+						</div>
+						<div id="submit_info">
+							应付总价：<font class="submit_info_red">￥20200.0</font>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div id="footer_wrapper">
+	<div id="footer">
+		<div id="footer_title">
+			<ul>
+				<li class="footer_title_item">
+					联系我们
+				</li>
+				<li class="footer_title_item_divider">
+					&nbsp; 
+				</li>
+				<li class="footer_title_item">
+					公告动态
+				</li>
+				<li class="footer_title_item_divider">
+					&nbsp; 
+				</li>
+				<li class="footer_title_item">
+					服务条款
+				</li>
+				<li class="footer_title_item_divider">
+					&nbsp; 
+				</li>
+				<li class="footer_title_item">
+					关于我们
+				</li>
+			</ul>
+		</div>
+		<div id="footer_content_contact">
+			<div id="footer_content_companyname">
+				成都智圆行方电子商务有限公司
+			</div>
+			<div id="footer_content_phone" class="footer_content_contact_item">
+				<img class="footer_content_contact_item_icon" src="./img/phone.jpg" />
+				<div class="footer_content_contact_item_text">联系电话：028-83887455</div>
+			</div>
+			<div id="footer_content_email" class="footer_content_contact_item">
+				<img class="footer_content_contact_item_icon" src="./img/email.jpg" />
+				<div class="footer_content_contact_item_text">Email：service@zhixuanhuaxue.com</div>
+			</div>
+			<div id="footer_content_address" class="footer_content_contact_item">
+				<img class="footer_content_contact_item_icon" src="./img/address.jpg" />
+				<div class="footer_content_contact_item_text">地址：中国·成都·天府创新中心</div>
+			</div>
+		</div>
+	</div>
+	<div id="end">
+		2015智选化学 zhixuan.com 京ICP证070791号 京公网安备11010502025545号 电子公告服务规则
+	</div>
+</div>
+<div id="pop_dialog_frame_order_address" class="pop_dialog_frame">
+	<div class="pop_dialog_mask">	
+	</div>
+	<div class="pop_dialog_wrapper">
+		<div class="pop_dialog">
+			<form id="pop_receiver_form">
+				<div class="pop_title">
+					<div class="pop_title_text">编辑收货人信息</div>
+					<div id="pop_dialog_frame_order_address_shutdown_button" class="pop_title_toolbar" onclick="shutdownAddressFrame()">
+						<img class="pop_title_toolbar_icon" src="./img/shutdown.png" />
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							收货人：
+						</div>
+					</div>
+					<div class="pop_content_item_right">
+						<div class="pop_content_content">
+							<input class="pop_content_input" type="text" />
+						</div>
+						<div id="pop_content_input_tip_receiver" class="pop_content_input_tip_hidden">请填写正确的提货人名字</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							所在地区：
+						</div>
+					</div>
+					<div class="pop_content_item_right">
+						<div class="pop_content_content">
+							<select class="pop_content_dropdown" >
+								<option>四川</option>
+								<option>广东</option>
+							</select>
+							<select class="pop_content_dropdown" >
+								<option>成都市</option>
+								<option>德阳市</option>
+							</select>
+							<select class="pop_content_dropdown" >
+								<option>彭州市</option>
+								<option>双流县</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							详细地址：
+						</div>
+					</div>
+					<div class="pop_content_item_right">
+						<div class="pop_content_content">
+							<input class="pop_content_input_long" type="text" />
+						</div>
+					</div>
+					<div id="pop_content_input_tip_mobile" class="pop_content_input_tip">请填写正确的手机号码</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							手机号码：
+						</div>
+					</div>
+					<div class="pop_content_item_right">
+						<div class="pop_content_content">
+							<input class="pop_content_input" type="text" />
+						</div>
+						<div id="pop_content_input_tip_mobile" class="pop_content_input_tip_hidden">请填写正确的手机号码</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							邮箱地址：
+						</div>
+					</div>
+					<div class="pop_content_item_right">
+						<div class="pop_content_content">
+							<input class="pop_content_input" type="text" />
+						</div>
+						<div id="pop_content_input_tip_email" class="pop_content_input_tip_hidden">请填写正确的邮箱</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+						</div>
+					</div>
+					<div class="pop_content_item_right">
+						<div class="pop_content_content">
+							<input class="pop_content_button" type="button" value="保存收货人信息" onclick="saveReceiver()" />
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div id="pop_dialog_frame_order_address_getter" class="pop_dialog_frame">
+	<div class="pop_dialog_mask">	
+	</div>
+	<div class="pop_dialog_wrapper">
+		<div class="pop_dialog_small">
+			<form id="pop_getter_form">
+				<div class="pop_title">
+					<div class="pop_title_text">编辑提货人信息</div>
+					<div id="pop_dialog_frame_order_address_shutdown_button" class="pop_title_toolbar" onclick="shutdownAddressFrameGetter()">
+						<img class="pop_title_toolbar_icon" src="./img/shutdown.png" />
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							提货人：
+						</div>
+					</div>
+					<div class="pop_content_item_right">
+						<div class="pop_content_content">
+							<input class="pop_content_input" type="text" />
+						</div>
+						<div id="pop_content_input_tip_getter" class="pop_content_input_tip_hidden">请填写正确的提货人名字</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							身份证号码：
+						</div>
+					</div>
+					<div class="pop_content_item_right">
+						<div class="pop_content_content">
+							<input class="pop_content_input" type="text" />
+						</div>
+						<div id="pop_content_input_tip_idno" class="pop_content_input_tip_hidden">请输入正确的身份证号</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							手机号码：
+						</div>
+					</div>
+					<div class="pop_content_item_right">
+						<div class="pop_content_content">
+							<input class="pop_content_input" type="text" />
+						</div>
+						<div id="pop_content_input_tip_getter_mobile" class="pop_content_input_tip_hidden">请输入正确的手机号码</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							车牌号：
+						</div>
+					</div>
+					<div class="pop_content_item_right">
+						<div class="pop_content_content">
+							<input class="pop_content_input" type="text" />
+						</div>
+						<div id="pop_content_input_tip_car_licence" class="pop_content_input_tip_hidden">请输入正确的车牌号</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							邮箱地址：
+						</div>
+					</div>
+					<div class="pop_content_item_right">
+						<div class="pop_content_content">
+							<input class="pop_content_input" type="text" />
+						</div>
+						<div id="pop_content_input_tip_getter_email" class="pop_content_input_tip_hidden">请输入正确的邮箱</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+						</div>
+					</div>
+					<div class="pop_content_item_right">
+						<div class="pop_content_content">
+							<input class="pop_content_button" type="button" value="保存提货人信息" onclick="saveGetter()" />
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div id="pop_dialog_confirm" class="pop_dialog_frame">
+	<div class="pop_dialog_mask">	
+	</div>
+	<div class="pop_dialog_wrapper">
+		<div class="pop_dialog_confirm">
+			<div class="pop_dialog_confirm_header">
+				<div class="pop_dialog_confirm_header_title">
+					确认提交
+				</div>
+				<div class="pop_dialog_confirm_header_exit" onclick="closeConfirmDialog()">
+					X
+				</div>
+			</div>
+			<div class="pop_dialog_confirm_content">
+				<div class="pop_dialog_confirm_content_text">
+					确认订单所有信息并提交订单？
+				</div>
+				<div class="pop_dialog_confirm_content_buttons">
+					<div class="pop_dialog_confirm_content_btn2" onclick="submitOrder(1,2)">
+						确认
+					</div>
+					<div class="pop_dialog_confirm_content_btn2" onclick="closeConfirmDialog()">
+						取消
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="pop_dialog_invoice" class="pop_dialog_frame">
+	<div class="pop_dialog_mask">	
+	</div>
+	<div class="pop_dialog_wrapper">
+		<div class="pop_dialog_invoice">
+			<form id="pop_getter_form">
+				<div class="pop_title">
+					<div class="pop_title_text">编辑发票信息</div>
+					<div id="pop_dialog_frame_order_address_shutdown_button" class="pop_title_toolbar" onclick="closeInvoiceDialog()">
+						<img class="pop_title_toolbar_icon" src="./img/shutdown.png" />
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							发票抬头：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input id="pop_content_input_invoice_id" class="pop_content_input_invoice" type="text" onchange="checkCompany()" />
+						</div>
+						<div id="pop_content_input_invoice_tip" class="pop_content_input_tip_hidden">请输入正确的公司名</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input class="pop_invoice_content_button" type="button" value="保存发票信息" onclick="saveInvoice()" />
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>

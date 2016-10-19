@@ -1,0 +1,1 @@
+INSERT INTO smartchemical.dbo.SmsConfiguration(smsFreeSignName, smsTemplateCode, smsParamString, extend, smsType, secret, appkey, url, smsConfName) VALUES (N'注册验证', N'SMS_5013787', N'{"code":"verifyCode","product":"智选化学"}', N'123456', N'normal', N'1711f9ce6a237a57229aec56950c4e9a', N'23314965', N'http://gw.api.taobao.com/router/rest', N'register_verify_code');

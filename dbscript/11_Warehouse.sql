@@ -1,0 +1,13 @@
+INSERT INTO smartchemical.dbo.Warehouse(address, warehouseName, warehouseAdminId, cityId) VALUES (N'智选化学', N'智选化学', 1, 342);
+INSERT INTO smartchemical.dbo.Warehouse(address, warehouseName, warehouseAdminId, cityId) VALUES (N'焦作市中站区', N'河南焦作市中站区', 1, 237);
+INSERT INTO smartchemical.dbo.Warehouse(address, warehouseName, warehouseAdminId, cityId) VALUES (N'省武汉市硚口区汇丰企业总部', N'湖北省武汉市硚口区汇丰企业总部', 1, 250);
+INSERT INTO smartchemical.dbo.Warehouse(address, warehouseName, warehouseAdminId, cityId) VALUES (N'抚州市临川区抚北镇安塘路4号', N'抚州市临川区抚北镇安塘路4号', 1, 290);
+INSERT INTO smartchemical.dbo.Warehouse(address, warehouseName, warehouseAdminId, cityId) VALUES (N'济南市天桥区济南新材料产业园区裕兴路100号', N'济南市天桥区济南新材料产业园区裕兴路100号', 1, 65);
+INSERT INTO smartchemical.dbo.Warehouse(address, warehouseName, warehouseAdminId, cityId) VALUES (N'上海市浦东新区祖冲之路', N'上海市浦东新区祖冲之路', 1, 458);
+INSERT INTO smartchemical.dbo.Warehouse(address, warehouseName, warehouseAdminId, cityId) VALUES (N'青岛李沧区金水路', N'青岛李沧区金水路', 1, 70);
+INSERT INTO smartchemical.dbo.Warehouse(address, warehouseName, warehouseAdminId, cityId) VALUES (N'攀枝花钒钛产业园区', N'攀枝花钒钛产业园区', 1, 349);
+INSERT INTO smartchemical.dbo.Warehouse(address, warehouseName, warehouseAdminId, cityId) VALUES (N'南京化学工业园区大纬东路229号', N'南京化学工业园区大纬东路229号', 1, 34);
+INSERT INTO smartchemical.dbo.Warehouse(address, warehouseName, warehouseAdminId, cityId) VALUES (N'宁波化学工业区跃进塘路1号', N'浙江宁波化学工业区跃进塘路1号', 1, 2);
+INSERT INTO smartchemical.dbo.Warehouse(address, warehouseName, warehouseAdminId, cityId) VALUES (N'淄博市博山区秋谷横里河55号', N'淄博市博山区秋谷横里河55号', 1, 76);
+INSERT INTO smartchemical.dbo.Warehouse(address, warehouseName, warehouseAdminId, cityId) VALUES (N'攀枝花市钒钛产业园区', N'攀枝花市钒钛产业园区', 1, 349);
+INSERT INTO smartchemical.dbo.Warehouse(address, warehouseName, warehouseAdminId, cityId) VALUES (N'昆明市盘龙区白塔路延长线七彩俊园一期4幢14楼', N'云南省昆明市盘龙区白塔路延长线七彩俊园一期4幢14楼', 1, 366);

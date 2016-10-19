@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Chemical</title>
+<link href="./css/frame.css" rel="stylesheet" type="text/css" />
+<link href="./css/user_page.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="./js/query_order.js" charset="UTF-8"></script>
+</head>
+
+<body class="background_gray">
+<div id="top_bar">
+	<div id="top_bar_wrapper">
+		<ul class="top_bar_ul_left">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">保留1</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a hrsef="http://www.baidu.com"><font class="font_gray">保留2</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我是供货商</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">更多</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我的订单</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我的智选</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="cart_icon"><img src="./img/cart.png" /></li>	
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">购物车</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">登录</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">注册</font></a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="top_navigator_blue_bg">
+	<div id="top_navigator_wrapper">
+		<div id="top_navigator_logo">
+			<img id="top_navigator_logo" src="./img/logo_blue_small_blue_bg.png" />
+		</div>
+		<div id="user_page_title">
+			<span id="user_page_title_span">个人中心</span>
+		</div>
+		<div id="top_navigator_right_user_page">
+			<div class="top_search_div_user_page">
+				<form name="search_form" action="MainSearch.action">
+					<input name="keyword" id="top_search_user_page" />
+					<div id="top_search_button"  onclick="click_submit();"><img src="./img/search_button_white.png" /></div>
+					<script>
+						function click_submit(){
+							search_form.submit();
+						}
+					</script>
+				</form>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<div id="total">
+<div id="total_wrapper">
+<div id="content">
+	<div id="my_zhixuan_wrapper">
+		<div id="my_zhixuan_left">
+			<div class="my_zhixuan_menu_group">
+				<ul>
+					<li class="my_zhixuan_left_li_title">
+						订单中心
+					</li>
+					<li class="my_zhixuan_left_li">
+						<a href="QueryOrder_unpaid.action"><font class="font_gray_light">未付款的订单</font></a>
+					</li>
+					<li class="my_zhixuan_left_li">
+						待收货的订单
+					</li>
+					<li class="my_zhixuan_left_li">
+						待提货的订单
+					</li>
+					<li class="my_zhixuan_left_li">
+						已完成的订单
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="my_zhixuan_right">
+			<div class="my_zhixuan_right_title">
+				<div class="my_zhixuan_right_title_text">未付款的订单</div>
+			</div>
+			<div class="my_zhixuan_right_content">
+				<div class="my_zhixuan_right_content_filter">
+					<div class="my_zhixuan_right_content_filter_item my_zhixuan_right_content_filter_date">
+						最近三个月订单 <img src="./img/more_down_gray.png" />
+						<div class="my_zhixuan_right_content_filter_date_filter_dropdown">
+							<ul>
+								<a href="QueryOrder_waitingGot.action">
+									<li class="my_zhixuan_right_content_filter_date_filter_dropdown_item">
+										最近一月的订单
+									</li>
+								</a>
+								<a href="QueryOrder_doneOrder.action">
+									<li class="my_zhixuan_right_content_filter_date_filter_dropdown_item">
+										最近三个月订单
+									</li>
+								</a>
+								<a href="QueryOrder_doneOrder.action">
+									<li class="my_zhixuan_right_content_filter_date_filter_dropdown_item">
+										最近六个月订单
+									</li>
+								</a>
+								<a href="QueryOrder_doneOrder.action">
+									<li class="my_zhixuan_right_content_filter_date_filter_dropdown_item">
+										最近一年的订单
+									</li>
+								</a>
+								<a href="QueryOrder_doneOrder.action">
+									<li class="my_zhixuan_right_content_filter_date_filter_dropdown_item">
+										所有订单
+									</li>
+								</a>
+							</ul>
+						</div>
+					</div>
+					<div class="my_zhixuan_right_content_filter_item my_zhixuan_right_content_filter_detail">
+						订单详情
+					</div>
+					<div class="my_zhixuan_right_content_filter_item my_zhixuan_right_content_filter_person">
+						收货人/提货人
+					</div>
+					<div class="my_zhixuan_right_content_filter_item my_zhixuan_right_content_filter_price">
+						金额
+					</div>
+					<div class="my_zhixuan_right_content_filter_item my_zhixuan_right_content_filter_status">
+						订单状态 <img src="./img/more_down_gray.png" />
+						<div class="my_zhixuan_right_content_filter_status_dropdown">
+							<ul>
+								<li class="my_zhixuan_right_content_filter_status_dropdown_item">
+									<a href="QueryOrder_unpaid.action">未付款</a>
+								</li>
+								<li class="my_zhixuan_right_content_filter_status_dropdown_item">
+									<a href="QueryOrder_waitingReceived.action">待收货</a>
+								</li>
+								<li class="my_zhixuan_right_content_filter_status_dropdown_item">
+									<a href="QueryOrder_waitingGot.action">待提货</a>
+								</li>
+								<li class="my_zhixuan_right_content_filter_status_dropdown_item">
+									<a href="QueryOrder_doneOrder.action">已完成</a>
+								</li>
+							</ul>
+						</div>
+					</div>	
+				</div>
+				<div class="my_zhixuan_right_content_order_item">
+					<div class="my_zhixuan_right_content_order_item_title">
+						<div class="right_content_order_item_title_orderdate">
+							2016-01-12 18:37
+						</div>
+						<div class="right_content_order_item_title_poNo">
+							订单号：<font class="font_red">1160000000103</font>
+						</div>
+					</div>
+					<div class="my_zhixuan_right_content_order_item_content">
+						<div class="my_zhixuan_right_content_order_item_productlist_wrapper">
+							<div class="my_zhixuan_right_content_order_item_product">
+								<div class="content_order_item_product_col1">
+									<img class="content_order_item_product_img" src="./img/product_pics/LR-108.png" />
+								</div>
+								<div class="content_order_item_product_col2">
+									<div class="content_order_item_product_link_wrapper">
+										<a href="www.baidu.com"><font class="font_light_gray">钛白粉LR-972 二氧化钛　TiO2钛白粉LR-972 二氧化钛　TiO2</font></a>
+									</div>
+									<div class="content_order_item_product_link_wrapper">
+										<a href="www.baidu.com"><font class="font_light_gray">佰利联化学</font></a>
+									</div>
+								</div>
+								<div class="content_order_item_product_col3">
+									<div class="content_order_item_product_quantity_wrapper">
+										<font class="font_light_gray">3.0吨</font>
+									</div>
+								</div>
+								<div class="content_order_item_product_col4">
+									<div class="content_order_item_product_quantity_wrapper">
+										<div><font class="font_light_gray">未付款</font></div>
+										<div class="product_item_operation"><font class="font_red">未付款</font></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="my_zhixuan_right_content_order_item_right">
+							<div class="my_zhixuan_right_content_order_item_right_item my_zhixuan_right_content_order_item_right_item_person">
+								李老师
+								<div class="my_zhixuan_person_pop">
+									<div class="my_zhixuan_person_pop_item">
+										收货人：李老师
+									</div>
+									<div class="my_zhixuan_person_pop_item">
+										手机号码：13540899935
+									</div>
+									<div class="my_zhixuan_person_pop_item">
+										地址：四川省-成都市-武侯区晋吉南路299号
+									</div>
+								</div>
+							</div>
+							<div class="my_zhixuan_right_content_order_item_right_item my_zhixuan_right_content_order_item_right_item_price">
+								￥60000
+							</div>
+							<div class="my_zhixuan_right_content_order_item_right_item my_zhixuan_right_content_order_item_right_item_status">
+								<font class="font_red">未未未付款</font>
+							</div>
+							<div class="my_zhixuan_right_content_order_item_right_item_button">
+								<form id="my_zhixuan_right_content_unpaid" action="OnlinePay.action">
+									<div class="my_zhixuan_right_content_order_item_right_button_paynow" onclick="payNow(1)">付款</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="my_zhixuan_right_content_order_item">
+					<div class="my_zhixuan_right_content_order_item_title">
+						<div class="right_content_order_item_title_orderdate">
+							2016-01-12 18:37
+						</div>
+						<div class="right_content_order_item_title_poNo">
+							订单号：<font class="font_red">1160000000103</font>
+						</div>
+					</div>
+					<div class="my_zhixuan_right_content_order_item_content">
+						<div class="my_zhixuan_right_content_order_item_productlist_wrapper">
+							<div class="my_zhixuan_right_content_order_item_product">
+								<div class="content_order_item_product_col1">
+									<img class="content_order_item_product_img" src="./img/product_pics/LR-108.png" />
+								</div>
+								<div class="content_order_item_product_col2">
+									<div class="content_order_item_product_link_wrapper">
+										<a class="content_order_item_product_link" href="www.baidu.com"><font class="font_light_gray">钛白粉LR-972 二氧化钛　TiO2</font></a>
+									</div>
+									<div class="content_order_item_product_link_wrapper">
+										<a class="content_order_item_product_link" href="www.baidu.com"><font class="font_light_gray">佰利联化学</font></a>
+									</div>
+								</div>
+								<div class="content_order_item_product_col3">
+									<div class="content_order_item_product_quantity_wrapper">
+										<font class="font_light_gray">3.0吨</font>
+									</div>
+								</div>
+								<div class="content_order_item_product_col4">
+									<div class="content_order_item_product_quantity_wrapper">
+										<font class="font_light_gray">未付款</font>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="my_zhixuan_right_content_order_item_right">
+							<div class="my_zhixuan_right_content_order_item_right_item my_zhixuan_right_content_order_item_right_item_person">
+								李老师
+								<div class="my_zhixuan_person_pop">
+									<div class="my_zhixuan_person_pop_item">
+										提货人：李老师
+									</div>
+									<div class="my_zhixuan_person_pop_item">
+										身份证号：510182198611182374
+									</div>
+									<div class="my_zhixuan_person_pop_item">
+										手机号码：13540899935
+									</div>
+									<div class="my_zhixuan_person_pop_item">
+										车牌号：川AC1232
+									</div>
+								</div>
+							</div>
+							<div class="my_zhixuan_right_content_order_item_right_item my_zhixuan_right_content_order_item_right_item_price">
+								￥60000
+							</div>
+							<div class="my_zhixuan_right_content_order_item_right_item my_zhixuan_right_content_order_item_right_item_status">
+								<font class="font_red">未付款</font>
+							</div>
+							<div class="my_zhixuan_right_content_order_item_right_item_button">
+								<form id="my_zhixuan_right_content_unpaid_form" action="OnlinePay.action">
+									<div class="my_zhixuan_right_content_order_item_right_button_paynow" onclick="onlinePay(1)">付款</div>
+									<div class="cancel_order" onclick="cancelOrder()"><font class="font_red">取消订单</font></div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<div id="footer_wrapper">
+	<div id="footer">
+		<div id="footer_title">
+			<ul>
+				<li class="footer_title_item">
+					联系我们
+				</li>
+				<li class="footer_title_item_divider">
+					&nbsp; 
+				</li>
+				<li class="footer_title_item">
+					公告动态
+				</li>
+				<li class="footer_title_item_divider">
+					&nbsp; 
+				</li>
+				<li class="footer_title_item">
+					服务条款
+				</li>
+				<li class="footer_title_item_divider">
+					&nbsp; 
+				</li>
+				<li class="footer_title_item">
+					关于我们
+				</li>
+			</ul>
+		</div>
+		<div id="footer_content_contact">
+			<div id="footer_content_companyname">
+				成都智圆行方电子商务有限公司
+			</div>
+			<div id="footer_content_phone" class="footer_content_contact_item">
+				<img class="footer_content_contact_item_icon" src="./img/phone.jpg" />
+				<div class="footer_content_contact_item_text">联系电话：028-83887455</div>
+			</div>
+			<div id="footer_content_email" class="footer_content_contact_item">
+				<img class="footer_content_contact_item_icon" src="./img/email.jpg" />
+				<div class="footer_content_contact_item_text">Email：service@zhixuanhuaxue.com</div>
+			</div>
+			<div id="footer_content_address" class="footer_content_contact_item">
+				<img class="footer_content_contact_item_icon" src="./img/address.jpg" />
+				<div class="footer_content_contact_item_text">地址：中国·成都·天府创新中心</div>
+			</div>
+		</div>
+	</div>
+	<div id="end">
+		2015智选化学 zhixuan.com 京ICP证070791号 京公网安备11010502025545号 电子公告服务规则
+	</div>
+</div>
+</body>
+</html>

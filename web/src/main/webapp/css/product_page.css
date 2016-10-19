@@ -1,0 +1,357 @@
+/* CSS Document */
+div#content_product_detail
+{
+	border:1px solid #eaeaea;
+	margin-top:12px;
+	width:inherit;
+	position:relative;
+	background-color:white;
+}
+div#content_product_detail_left
+{
+	width:80%;
+	border:1px solid #eaeaea;
+	border-right:none;
+	border-bottom:none;
+	position:relative;
+}
+div#content_product_detail_right
+{
+	width:19%;
+	position:absolute;
+	top:0;
+	right:0;
+	padding-bottom:30px;
+	border:1px solid #eaeaea;
+}
+div#content_product_detail_l
+{
+	width:40%;
+	height:400px;
+	margin:10px;
+	border:1px solid #eaeaea;
+}
+img.content_product_detail_pic
+{
+	height:300px;
+	width:310px;
+	padding:5px;
+}
+div#content_product_detail_r
+{
+	width:54%;
+	margin:10px;
+	padding:10px;
+	position:absolute;
+	height:380px;
+	top:0;
+	right:0;
+	border:1px solid #eaeaea;
+}
+div#content_product_detail_r_title
+{	
+	height:70px;
+	margin-bottom:5px;
+}
+p.content_product_detail_r_title
+{
+	margin:0;
+	margin-left:6px;
+	font-family: "Microsoft YaHei";
+	font-size: 23px;
+	font-weight:500;
+	color:#333333;
+}
+span.content_product_detail_r_desc
+{
+	margin:0;
+	margin-left:6px;
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+	font-weight:300;
+}
+div#content_product_detail_r_price
+{	
+	height:80px;
+	margin-bottom:5px;
+	margin-top:5px;
+}
+div#content_product_detail_r_price1
+{	
+	height:40px;
+	font-family: "Microsoft YaHei";
+	font-size: 24px;
+	font-weight:300;
+	padding-top:10px;
+	background-color:#f7f7f7;
+}
+font.content_product_detail_r_price
+{
+	font-family: "Microsoft YaHei";
+	font-size: 15px;
+	font-weight:300;
+	margin-left:6px;
+	margin-right:12px;
+	
+}
+div#content_product_detail_r_price2
+{
+	font-family: "Microsoft YaHei";
+	font-size:12px;
+	padding-left:6px;
+	padding-top:6px;
+	height:22px;
+	background-color:#f7f7f7;
+}
+div#content_product_detail_r_logistic
+{	
+	font-family: "Microsoft YaHei";
+	font-size: 13px;
+	padding-left:6px;
+	padding-top:6px;
+	height:28px;
+}
+div#content_product_detail_r_quantity
+{	
+	font-family: "Microsoft YaHei";
+	font-size: 15px;
+	padding-left:6px;
+	padding-top:22px;
+	height:32px;
+}
+span#content_product_detail_r_quantity
+{
+	float:left;
+}
+div#content_product_detail_adder_div
+{
+	float:left;
+	margin-left:10px;
+	margin-right:10px;
+}
+.content_product_detail_adder
+{
+	height:22px;
+	width:24px;
+	display:block;
+	text-align:center;
+	font-size:16px;
+	float:left;
+	cursor:pointer;
+	border:1px solid #eaeaea;
+}
+.content_product_detail_adder:hover
+{
+	background-color:#eaeaea;
+}
+input#content_product_detail_adder_input
+{
+	float:left;
+	height:20px;
+	width:50px;
+	text-align:center;
+	border:1px solid #eaeaea;
+}
+div#content_product_detail_r_purchase
+{	
+	height:120px;
+}
+div#content_product_detail_r_purchase_button
+{
+	width:180px;
+	height:34px;
+	margin-left:6px;
+	margin-right:16px;
+	margin-top:35px;
+	float:left;
+	cursor:pointer;
+}
+div#content_product_detail_r_cart_button
+{	
+	width:200px;
+	height:34px;
+	margin-top:35px;
+	float:left;
+	cursor:pointer;
+}
+.content_product_detail_purchase_button
+{
+	height:inherit;
+	width:inherit;
+	background-color:#FFE4D0;
+	color:#E5511D;
+	display:block;
+	text-align:center;
+	font-size:20px;
+	font-family: "Microsoft YaHei";
+	float:left;
+	padding-top:6px;
+	border:1px solid #F0CAB6;
+	border-style:double;
+	border-radius:5px;
+}
+.content_product_detail_purchase_button_disable
+{
+	height:inherit;
+	width:inherit;
+	background-color:#eaeaea;
+	color:#666666;
+	display:block;
+	text-align:center;
+	font-size:20px;
+	font-family: "Microsoft YaHei";
+	float:left;
+	padding-top:6px;
+	border:1px solid #eaeaea;
+	border-style:double;
+	border-radius:5px;
+}
+.content_product_detail_cart_button
+{
+	height:inherit;
+	width:inherit;
+	background-color:#E5511D;
+	color:white;
+	display:block;
+	text-align:center;
+	font-size:20px;
+	font-family: "Microsoft YaHei";
+	float:left;
+	padding-top:6px;
+	border:1px solid #eaeaea;
+	border-style:double;
+	border-radius:5px;
+}
+.content_product_detail_cart_button_disable
+{
+	height:inherit;
+	width:inherit;
+	background-color:#eaeaea;
+	color:#666666;
+	display:block;
+	text-align:center;
+	font-size:20px;
+	font-family: "Microsoft YaHei";
+	float:left;
+	padding-top:6px;
+	border:1px solid #eaeaea;
+	border-style:double;
+	border-radius:5px;
+}
+div#content_product_detail_right_vendor_title
+{
+	font-size:16px;
+	font-family: "Microsoft YaHei";
+	padding-top:10px;
+	margin-bottom:10px;
+	text-align:center;
+	height:30px;
+	border-bottom:1px solid #eaeaea;
+	background-color:#f7f7f7;
+}
+div#content_product_detail_right_vendor_icon
+{
+	text-align:center;
+	margin:10px;
+	padding-bottom:10px;
+	border-bottom:1px solid #eaeaea;
+}
+div#content_product_detail_right_vendor_name
+{
+	font-size:14px;
+	padding-top:10px;
+	font-family: "Microsoft YaHei";
+	text-align:center;
+}
+div#content_product_detail_right_vendor_desc
+{
+	font-size:12px;
+	font-family: "Microsoft YaHei";
+	margin-top:15px;
+	margin-left:15px;
+	text-align:left;
+}
+p.content_product_detail_right_vendor_p
+{
+	margin-bottom:8px;
+}
+div#content_product_detail_right_vendor_botton
+{
+	width:100%;
+	margin-top:20px;
+	text-align:center;	
+}
+a.content_product_detail_right_vendor_botton
+{
+	height:29px;
+	width:140px;
+	background-color:#2672c8;
+	color:white;
+	display:block;
+	text-align:center;
+	font-size:16px;
+	font-family: "Microsoft YaHei";
+	margin-left:30px;
+	padding-top:6px;
+	border:1px solid #eaeaea;
+	border-style:double;
+	border-radius:5px;
+}
+
+div#content_product_detail_page
+{
+	margin:10px 10px 10px 10px;
+}
+div#content_product_detail_page_tab
+{
+	height:37px;
+	border:1px solid #eaeaea;
+	border-top:2px solid #999;
+	background-color:#F7F7F7;
+}
+ul#content_product_detail_page_tab
+{
+	
+}
+li.content_product_detail_page_tab_item
+{
+	list-style:none;
+	float:left;
+}
+a.content_product_detail_page_tab_item
+{
+	height:30px;
+	width:90px;
+	padding-top:8px;
+	text-align:center;
+	display:block;
+	font-size:14px;
+	font-family: "Microsoft YaHei";
+}
+div.content_product_detail_page_summary
+{
+	padding:20px 10px 10px 20px;
+	border:1px solid #eaeaea;
+	border-top:none;
+}
+ul#content_product_detail_page_summary
+{
+	overflow:hidden;
+}
+li.content_product_detail_page_summary_item
+{
+	list-style:none;
+	float:left;
+	width:200px;
+	margin-bottom:10px;
+	font-family: "Microsoft YaHei";
+	font-size:14px;
+}
+div.content_product_detail_page_detail
+{
+	font-family: "Microsoft YaHei";
+	font-size:14px;
+	margin-top:10px;
+	padding:15px;
+	border:1px solid #eaeaea;
+}

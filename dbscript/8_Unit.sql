@@ -1,0 +1,9 @@
+INSERT INTO smartchemical.dbo.Unit(unitType, unitName) VALUES (N'重量', N'吨');
+INSERT INTO smartchemical.dbo.Unit(unitType, unitName) VALUES (N'重量', N'千克');
+INSERT INTO smartchemical.dbo.Unit(unitType, unitName) VALUES (N'重量', N'克');
+INSERT INTO smartchemical.dbo.Unit(unitType, unitName) VALUES (N'长度', N'米');
+INSERT INTO smartchemical.dbo.Unit(unitType, unitName) VALUES (N'长度', N'分米');
+INSERT INTO smartchemical.dbo.Unit(unitType, unitName) VALUES (N'长度', N'厘米');
+INSERT INTO smartchemical.dbo.Unit(unitType, unitName) VALUES (N'长度', N'千米');
+INSERT INTO smartchemical.dbo.Unit(unitType, unitName) VALUES (N'货币', N'元');
+INSERT INTO smartchemical.dbo.Unit(unitType, unitName) VALUES (N'货币', N'美元');

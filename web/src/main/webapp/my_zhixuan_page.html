@@ -1,0 +1,638 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Chemical</title>
+<link href="./css/frame.css" rel="stylesheet" type="text/css" />
+<link href="./css/user_page.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="./js/myzhixuan.js" charset="UTF-8"></script>
+</head>
+
+<body class="background_gray">
+<div id="top_bar">
+	<div id="top_bar_wrapper">
+		<ul class="top_bar_ul_left">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">保留1</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a hrsef="http://www.baidu.com"><font class="font_gray">保留2</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我是供货商</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">更多</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我的订单</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我的智选</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="cart_icon"><img src="./img/cart.png" /></li>	
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">购物车</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">登录</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">注册</font></a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="top_navigator_blue_bg">
+	<div id="top_navigator_wrapper">
+		<div id="top_navigator_logo">
+			<img id="top_navigator_logo" src="./img/logo_blue_small_blue_bg.png" />
+		</div>
+		<div id="user_page_title">
+			<span id="user_page_title_span">个人中心</span>
+		</div>
+		<div id="top_navigator_right_user_page">
+			<div class="top_search_div_user_page">
+				<form name="search_form" action="MainSearch.action">
+					<input name="keyword" id="top_search_user_page" />
+					<div id="top_search_button"  onclick="click_submit();"><img src="./img/search_button_white.png" /></div>
+					<script>
+						function click_submit(){
+							search_form.submit();
+						}
+					</script>
+				</form>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<div id="total">
+<div id="total_wrapper">
+<div id="content">
+	<div id="my_zhixuan_wrapper">
+		<div id="my_zhixuan_left">
+			<div class="my_zhixuan_menu_group">
+				<ul>
+					<li class="my_zhixuan_left_li_title">
+						订单中心
+					</li>
+					<li class="my_zhixuan_left_li">
+						<a href="QueryOrder_unpaid.action"><font class="font_gray_light">未付款的订单</font></a>
+					</li>
+					<li class="my_zhixuan_left_li">
+						待收货的订单
+					</li>
+					<li class="my_zhixuan_left_li">
+						待提货的订单
+					</li>
+					<li class="my_zhixuan_left_li">
+						已完成的订单
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="my_zhixuan_right">
+			<div class="user_profile">
+				<div class="user_profile_left">
+					<div class="user_photo_div">
+						<img class="user_photo" src="./img/demo_product.jpg" />
+					</div>
+				</div>
+				<div class="user_profile_right">
+					<div class="user_profile_right_order_status">
+						<div class="user_profile_right_order_status_title">
+							订单状态
+						</div>
+						<div class="user_profile_right_order_status_content">
+							<div class="user_profile_right_order_status_content_item">
+								<div class="user_profile_right_order_status_content_item_button">
+									<div class="user_profile_img_frame">
+										<img class="user_profile_img" src="./img/function_icon2.png" />
+									</div>
+									<div class="user_profile_text_frame">
+										未付款的订单 <font class="font_red">(0)</font>
+									</div>
+								</div>
+							</div>
+							<div class="user_profile_right_order_status_content_item">
+								<div class="user_profile_right_order_status_content_item_button">
+									<div class="user_profile_img_frame">
+										<img class="user_profile_img" src="./img/function_icon1.png" />
+									</div>
+									<div class="user_profile_text_frame">
+										待收货的订单 <font class="font_red">(0)</font>
+									</div>
+								</div>
+							</div>
+							<div class="user_profile_right_order_status_content_item">
+								<div class="user_profile_right_order_status_content_item_button">
+									<div class="user_profile_img_frame">
+										<img class="user_profile_img" src="./img/function_icon1.png" />
+									</div>
+									<div class="user_profile_text_frame">
+										待提货的订单 <font class="font_red">(0)</font>
+									</div>
+								</div>
+							</div>
+							<div class="user_profile_right_order_status_content_item">
+								<div class="user_profile_right_order_status_content_item_button">
+									<div class="user_profile_img_frame">
+										<img class="user_profile_img" src="./img/function_icon2.png" />
+									</div>
+									<div class="user_profile_text_frame">
+										已完成的订单 <font class="font_red">(0)</font>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="user_profile_right_user_info">
+						<div class="user_profile_right_user_info_title">
+							用户信息
+						</div>
+						<div class="user_profile_right_order_status_content">
+							<div class="userinfo_wrapper">
+								<div class="user_profile_right_userinfo_item">
+									&nbsp &nbsp用户名：admin
+								</div>
+								<div class="user_profile_right_userinfo_item">
+									&nbsp &nbsp公&nbsp &nbsp司：成都智圆行方电子商务有限公司
+								</div>
+								<div class="user_profile_right_userinfo_item">
+									账户余额：<font class="font_red">￥123.0</font> &nbsp &nbsp 
+									<font onclick="showGetdeposit()" class="font_red hover_pointer">提现</font> &nbsp 
+									<font onclick="showTransferdeposit()" class="font_red hover_pointer">代付</font> &nbsp
+									<font class="recharge_text font_blue hover_pointer">
+										充值
+										<div class="recharge_select_pop">
+											<a href="AcceptanceBillRecharge.action"><div class="recharge_select_item">承兑充值</div></a>
+											<a href=""><div class="recharge_select_item">转账充值</div></a>
+											<a href="OnlineRecharge.action"><div class="recharge_select_item">网银充值</div></a>
+										</div>
+									</font>
+								</div>
+								<div class="user_profile_right_userinfo_item">
+									&nbsp &nbsp邮&nbsp &nbsp箱：admin@zhixuanhuaxue.com
+								</div>
+								<div class="user_profile_right_userinfo_item">
+									&nbsp &nbsp手&nbsp &nbsp机：13540899935
+								</div>
+								<div class="user_profile_right_userinfo_item">
+									注册时间：2016-1-22 15:15
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="my_zhixuan_right_content">
+				<div class="user_profile_right_title_text">我的订单</div>
+				<div class="my_zhixuan_right_content_filter">
+					<div class="my_zhixuan_right_content_filter_item my_zhixuan_right_content_filter_date">
+						最近三个月订单 <img src="./img/more_down_gray.png" />
+						<div class="my_zhixuan_right_content_filter_date_filter_dropdown">
+							<ul>
+								<a href="QueryOrder_waitingGot.action">
+									<li class="my_zhixuan_right_content_filter_date_filter_dropdown_item">
+										最近一月的订单
+									</li>
+								</a>
+								<a href="QueryOrder_doneOrder.action">
+									<li class="my_zhixuan_right_content_filter_date_filter_dropdown_item">
+										最近三个月订单
+									</li>
+								</a>
+								<a href="QueryOrder_doneOrder.action">
+									<li class="my_zhixuan_right_content_filter_date_filter_dropdown_item">
+										最近六个月订单
+									</li>
+								</a>
+								<a href="QueryOrder_doneOrder.action">
+									<li class="my_zhixuan_right_content_filter_date_filter_dropdown_item">
+										最近一年的订单
+									</li>
+								</a>
+								<a href="QueryOrder_doneOrder.action">
+									<li class="my_zhixuan_right_content_filter_date_filter_dropdown_item">
+										所有订单
+									</li>
+								</a>
+							</ul>
+						</div>
+					</div>
+					<div class="my_zhixuan_right_content_filter_item my_zhixuan_right_content_filter_detail">
+						订单详情
+					</div>
+					<div class="my_zhixuan_right_content_filter_item my_zhixuan_right_content_filter_person">
+						收货人/提货人
+					</div>
+					<div class="my_zhixuan_right_content_filter_item my_zhixuan_right_content_filter_price">
+						金额
+					</div>
+					<div class="my_zhixuan_right_content_filter_item my_zhixuan_right_content_filter_status">
+						订单状态 <img src="./img/more_down_gray.png" />
+						<div class="my_zhixuan_right_content_filter_status_dropdown">
+							<ul>
+								<li class="my_zhixuan_right_content_filter_status_dropdown_item">
+									<a href="QueryOrder_unpaid.action">未付款</a>
+								</li>
+								<li class="my_zhixuan_right_content_filter_status_dropdown_item">
+									<a href="QueryOrder_waitingReceived.action">待收货</a>
+								</li>
+								<li class="my_zhixuan_right_content_filter_status_dropdown_item">
+									<a href="QueryOrder_waitingGot.action">待提货</a>
+								</li>
+								<li class="my_zhixuan_right_content_filter_status_dropdown_item">
+									<a href="QueryOrder_doneOrder.action">已完成</a>
+								</li>
+							</ul>
+						</div>
+					</div>	
+				</div>
+				<div class="my_zhixuan_right_content_order_item">
+					<div class="my_zhixuan_right_content_order_item_title">
+						<div class="right_content_order_item_title_orderdate">
+							2016-01-12 18:37
+						</div>
+						<div class="right_content_order_item_title_poNo">
+							订单号：<font class="font_red">1160000000103</font>
+						</div>
+					</div>
+					<div class="my_zhixuan_right_content_order_item_content">
+						<div class="my_zhixuan_right_content_order_item_productlist_wrapper">
+							<div class="my_zhixuan_right_content_order_item_product">
+								<div class="content_order_item_product_col1">
+									<img class="content_order_item_product_img" src="./img/product_pics/LR-108.png" />
+								</div>
+								<div class="content_order_item_product_col2">
+									<div class="content_order_item_product_link_wrapper">
+										<a class="content_order_item_product_link" href="www.baidu.com"><font class="font_light_gray">钛白粉LR-972 二氧化钛　TiO2</font></a>
+									</div>
+									<div class="content_order_item_product_link_wrapper">
+										<a class="content_order_item_product_link" href="www.baidu.com"><font class="font_light_gray">佰利联化学</font></a>
+									</div>
+								</div>
+								<div class="content_order_item_product_col3">
+									<div class="content_order_item_product_quantity_wrapper">
+										<font class="font_light_gray">3.0吨</font>
+									</div>
+								</div>
+								<div class="content_order_item_product_col4">
+									<div class="content_order_item_product_quantity_wrapper">
+										<div><font class="font_light_gray">未付款</font></div>
+										<div class="product_item_operation"><font class="font_red">未付款</font></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="my_zhixuan_right_content_order_item_right">
+							<div class="my_zhixuan_right_content_order_item_right_item my_zhixuan_right_content_order_item_right_item_person">
+								李老师
+								<div class="my_zhixuan_person_pop">
+									<div class="my_zhixuan_person_pop_item">
+										收货人：李老师
+									</div>
+									<div class="my_zhixuan_person_pop_item">
+										手机号码：13540899935
+									</div>
+									<div class="my_zhixuan_person_pop_item">
+										地址：四川省-成都市-武侯区晋吉南路299号
+									</div>
+								</div>
+							</div>
+							<div class="my_zhixuan_right_content_order_item_right_item my_zhixuan_right_content_order_item_right_item_price">
+								￥60000
+							</div>
+							<div class="my_zhixuan_right_content_order_item_right_item my_zhixuan_right_content_order_item_right_item_status">
+								<font class="font_red">未未未付款</font>
+							</div>
+							<div class="my_zhixuan_right_content_order_item_right_item_button">
+								<form id="my_zhixuan_right_content_unpaid" action="OnlinePay.action">
+									<div class="my_zhixuan_right_content_order_item_right_button_paynow" onclick="payNow(1)">付款</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="my_zhixuan_right_content_order_item">
+					<div class="my_zhixuan_right_content_order_item_title">
+						<div class="right_content_order_item_title_orderdate">
+							2016-01-12 18:37
+						</div>
+						<div class="right_content_order_item_title_poNo">
+							订单号：<font class="font_red">1160000000103</font>
+						</div>
+					</div>
+					<div class="my_zhixuan_right_content_order_item_content">
+						<div class="my_zhixuan_right_content_order_item_productlist_wrapper">
+							<div class="my_zhixuan_right_content_order_item_product">
+								<div class="content_order_item_product_col1">
+									<img class="content_order_item_product_img" src="./img/product_pics/LR-108.png" />
+								</div>
+								<div class="content_order_item_product_col2">
+									<div class="content_order_item_product_link_wrapper">
+										<a class="content_order_item_product_link" href="www.baidu.com"><font class="font_light_gray">钛白粉LR-972 二氧化钛　TiO2</font></a>
+									</div>
+									<div class="content_order_item_product_link_wrapper">
+										<a class="content_order_item_product_link" href="www.baidu.com"><font class="font_light_gray">佰利联化学</font></a>
+									</div>
+								</div>
+								<div class="content_order_item_product_col3">
+									<div class="content_order_item_product_quantity_wrapper">
+										<font class="font_light_gray">3.0吨</font>
+									</div>
+								</div>
+								<div class="content_order_item_product_col4">
+									<div class="content_order_item_product_quantity_wrapper">
+										<font class="font_light_gray">未付款</font>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="my_zhixuan_right_content_order_item_right">
+							<div class="my_zhixuan_right_content_order_item_right_item my_zhixuan_right_content_order_item_right_item_person">
+								李老师
+								<div class="my_zhixuan_person_pop">
+									<div class="my_zhixuan_person_pop_item">
+										提货人：李老师
+									</div>
+									<div class="my_zhixuan_person_pop_item">
+										身份证号：510182198611182374
+									</div>
+									<div class="my_zhixuan_person_pop_item">
+										手机号码：13540899935
+									</div>
+									<div class="my_zhixuan_person_pop_item">
+										车牌号：川AC1232
+									</div>
+								</div>
+							</div>
+							<div class="my_zhixuan_right_content_order_item_right_item my_zhixuan_right_content_order_item_right_item_price">
+								￥60000
+							</div>
+							<div class="my_zhixuan_right_content_order_item_right_item my_zhixuan_right_content_order_item_right_item_status">
+								<font class="font_red">未付款</font>
+							</div>
+							<div class="my_zhixuan_right_content_order_item_right_item_button">
+								<form id="my_zhixuan_right_content_unpaid_form" action="OnlinePay.action">
+									<div class="my_zhixuan_right_content_order_item_right_button_paynow" onclick="onlinePay(1)">付款</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	<div id="footer_cooperation" class="footer_item">
+		<p class="footer_h5">商务合作</p>
+		<ul class="footer_ul">
+			<li class="footer_li">供应商合作1</li>
+			<li class="footer_li">供应商合作2</li>
+			<li class="footer_li">供应商合作3</li>
+			<li class="footer_li">供应商合作4</li>
+		</ul>
+	</div>
+	<div id="footer_companyinfo" class="footer_item">
+		<p class="footer_h5">公司信息</p>
+		<ul class="footer_ul">
+			<li class="footer_li">公司信息1</li>
+			<li class="footer_li">公司信息2</li>
+			<li class="footer_li">公司信息3</li>
+			<li class="footer_li">公司信息4</li>
+		</ul>
+	</div>
+	<div id="footer_userhelp" class="footer_item">
+		<p class="footer_h5">用户帮助</p>
+		<ul class="footer_ul">
+			<li class="footer_li">用户帮助1</li>
+			<li class="footer_li">用户帮助2</li>
+			<li class="footer_li">用户帮助3</li>
+			<li class="footer_li">用户帮助4</li>
+		</ul>
+	</div>
+	<div id="footer_custom_service">
+		<img src="./img/custom_service_icon.png" />
+		<p class="footer_p">客服电话</p>
+		<p class="footer_p">028-84767883</p>
+	</div>
+</div>
+<div id="end">
+	2015智选化学 zhixuan.com 京ICP证070791号 京公网安备11010502025545号 电子公告服务规则
+</div>
+</div>
+</div>
+<div id="pop_dialog_getdeposit" class="pop_dialog_frame">
+	<div class="pop_dialog_mask">	
+	</div>
+	<div class="pop_dialog_wrapper">
+		<div class="pop_dialog_withdraw">
+			<form id="pop_getter_form">
+				<div class="pop_title">
+					<div class="pop_title_text">提现请求</div>
+					<div id="pop_dialog_frame_order_address_shutdown_button" class="pop_title_toolbar" onclick="closeGetdepostDialog()">
+						<img class="pop_title_toolbar_icon" src="./img/shutdown.png" />
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							提现金额：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input id="pop_content_getdeposit_amount_id" class="pop_content_input_invoice" type="text" onblur="checkGetAmount()" />
+						</div>
+						<div id="pop_content_getdeposit_amount_tip" class="pop_content_input_tip_hidden">请输入正确的提现金额</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							提现账户：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<select id="pop_content_getdeposit_accountno_id" class="pop_content_content_bankaccount">
+								<option value="1">陈世爵 4682031289989198</option>
+								<option value="2">肖然 4682031289989198</option>
+								<option value="3">西南 4682031289989198</option>
+								<option value="4">东北 4682031289989198</option>
+							</select>
+						</div>
+						<div id="pop_content_getdeposit_accountno_tip" class="pop_content_input_tip_hidden">请选择提现账户</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							验证码：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input id="pop_content_getdeposit_verifycode_id" class="pop_content_input_verifycode" type="text" onchange="checkCompany()" />
+							<input id="pop_content_getdeposit_verifycode_button" class="pop_content_input_verifycode_button" type="button" value="获取验证码" onclick="sendGetdepositVerifyCode()" />
+						</div>
+						<div id="pop_content_getdeposit_verifycode_tip1" class="pop_content_input_tip_hidden">验证码错误</div>
+						<div id="pop_content_getdeposit_verifycode_tip2" class="pop_content_input_tip_hidden">已发送到手机18682731302</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input class="pop_invoice_content_button" type="button" value="提交提现请求" onclick="saveGetdepositRequest()" />
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div id="pop_dialog_transferdeposit" class="pop_dialog_frame">
+	<div class="pop_dialog_mask">	
+	</div>
+	<div class="pop_dialog_wrapper">
+		<div class="pop_dialog_transfer">
+			<form id="pop_getter_form">
+				<div class="pop_title">
+					<div class="pop_title_text">代付请求</div>
+					<div id="pop_dialog_frame_order_address_shutdown_button" class="pop_title_toolbar" onclick="closeTransferdepostDialog()">
+						<img class="pop_title_toolbar_icon" src="./img/shutdown.png" />
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							提现账户：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<select id="pop_content_transfer_acountno_select_id" class="pop_content_content_bankaccount">
+								<option value="0">新建账户</option>
+								<option value="1">陈世爵 4682031289989198</option>
+								<option value="2">肖然 4682031289989198</option>
+								<option value="3">西南 4682031289989198</option>
+								<option value="4">东北 4682031289989198</option>
+							</select>
+						</div>
+						<div id="pop_content_transfer_acountno_select_tip" class="pop_content_input_tip_hidden">请选择提现账户</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							提现金额：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input id="pop_content_transfer_amount_id" class="pop_content_input_invoice" type="text" onblur="checkTransferAmount()" />
+						</div>
+						<div id="pop_content_transfer_amount_tip" class="pop_content_input_tip_hidden">请输入正确的提现金额</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							账号：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input id="pop_content_transfer_acountno_id" class="pop_content_input_invoice" type="text" onblur="checkAccountNo()" />
+						</div>
+						<div id="pop_content_transfer_acountno_tip" class="pop_content_input_tip_hidden">请输入正确的账号</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							账户名：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input id="pop_content_transfer_acountname_id" class="pop_content_input_invoice" type="text" onblur="checkAccountName()" />
+						</div>
+						<div id="pop_content_transfer_acountname_tip" class="pop_content_input_tip_hidden">请输入正确的账户名</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							开户行：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input id="pop_content_transfer_acountbank_id" class="pop_content_input_invoice" type="text" onblur="checkAccountBank()" />
+						</div>
+						<div id="pop_content_transfer_acountbank_tip" class="pop_content_input_tip_hidden">请输入正确的开户行</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							地址：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input id="pop_content_transfer_address_id" class="pop_content_input_invoice" type="text" onblur="checkAddress()" />
+						</div>
+						<div id="pop_content_transfer_address_tip" class="pop_content_input_tip_hidden">请输入正确的地址</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							电话：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input id="pop_content_transfer_mobile_id" class="pop_content_input_invoice" type="text" onblur="checkMobile()" />
+						</div>
+						<div id="pop_content_transfer_mobile_tip" class="pop_content_input_tip_hidden">请输入正确的电话</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							验证码：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input id="pop_content_transfer_verifycode_id" class="pop_content_input_verifycode" type="text" onchange="checkCompany()" />
+							<input id="pop_content_transfer_verifycode_button" class="pop_content_input_verifycode_button" type="button" value="获取验证码" />
+						</div>
+						<div id="pop_content_transfer_verifycode_tip1" class="pop_content_input_tip_hidden">验证码错误</div>
+						<div id="pop_content_transfer_verifycode_tip2" class="pop_content_input_tip_hidden">已发送到手机18682731302</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input class="pop_invoice_content_button" type="button" value="提交代付请求" onclick="saveTransferRequst()" />
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,550 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Chemical</title>
+<link href="./css/frame.css" rel="stylesheet" type="text/css" />
+<link href="./css/user_page.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="./js/myzhixuan.js" charset="UTF-8"></script>
+</head>
+
+<body class="background_gray">
+<div id="top_bar">
+	<div id="top_bar_wrapper">
+		<ul class="top_bar_ul_left">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">保留1</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a hrsef="http://www.baidu.com"><font class="font_gray">保留2</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我是供货商</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">更多</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我的订单</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我的智选</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="cart_icon"><img src="./img/cart.png" /></li>	
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">购物车</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">登录</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">注册</font></a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="top_navigator_blue_bg">
+	<div id="top_navigator_wrapper">
+		<div id="top_navigator_logo">
+			<img id="top_navigator_logo" src="./img/logo_blue_small_blue_bg.png" />
+		</div>
+		<div id="user_page_title">
+			<span id="user_page_title_span">个人中心</span>
+		</div>
+		<div id="top_navigator_right_user_page">
+			<div class="top_search_div_user_page">
+				<form name="search_form" action="MainSearch.action">
+					<input name="keyword" id="top_search_user_page" />
+					<div id="top_search_button"  onclick="click_submit();"><img src="./img/search_button_white.png" /></div>
+					<script>
+						function click_submit(){
+							search_form.submit();
+						}
+					</script>
+				</form>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<div id="total">
+<div id="total_wrapper">
+<div id="content">
+	<div id="my_zhixuan_wrapper">
+		<div id="my_zhixuan_left">
+			<div class="my_zhixuan_menu_group">
+				<ul>
+					<li class="my_zhixuan_left_li_title">
+						订单中心
+					</li>
+					<li class="my_zhixuan_left_li">
+						<a href="QueryOrder_unpaid.action"><font class="font_gray_light">未付款的订单</font></a>
+					</li>
+					<li class="my_zhixuan_left_li">
+						待收货的订单
+					</li>
+					<li class="my_zhixuan_left_li">
+						待提货的订单
+					</li>
+					<li class="my_zhixuan_left_li">
+						已完成的订单
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="my_zhixuan_right">
+			<div class="my_zhixuan_right_title">
+				<div class="my_zhixuan_right_title_text">
+					所有请求
+				</div>
+			</div>
+			<div class="my_zhixuan_right_content">
+				<form id="products_search" action="Login.action" method="post">
+				</form>
+				<div class="product_list_filters">
+					<div class="product_list_filter_item">
+						<div class="product_list_filter_item_left">
+							用户：
+						</div>
+						<div class="product_list_filter_item_right">
+							<input id="product_list_search_input" class="product_list_filter_item_input" onkeydown="if(event.keyCode==13){submit_product_search_form();}" />
+						</div>
+					</div>
+					<div class="product_list_filter_item">
+						<div class="product_list_filter_item_left">
+							请求状态：
+						</div>
+						<div class="product_list_filter_item_right">
+							<select class="product_list_filter_item_select" >
+								<option selected="selected" value="0">所有状态</option>
+								<option value="127">已完成</option>
+								<option value="1">等待转账</option>
+								<option value="2">等待上传承兑</option>
+								<option value="3">等待邮寄承兑</option>
+								<option value="4">正在兑换承兑</option>
+							</select>
+						</div>
+					</div>
+					<div class="product_list_filter_item">
+						<div class="product_list_filter_item_left">
+							充值方式：
+						</div>
+						<div class="product_list_filter_item_right">
+							<select class="product_list_filter_item_select" >
+								<option selected="selected" value="0">所有方式</option>
+								<option value="1">承兑充值</option>
+								<option value="2">转账充值</option>
+							</select>
+						</div>
+					</div>
+					<div class="product_list_filter_item">
+						<div class="product_list_filter_item_left">
+							请求时间：
+						</div>
+						<div class="product_list_filter_item_right">
+							<select class="product_list_filter_item_select" >
+								<option value="0">所有请求</option>
+								<option value="1">最近一周</option>
+								<option value="2">最近一月</option>
+								<option value="3">最近三月</option>
+								<option value="3">最近半年</option>
+								<option value="3">最近一年</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="order_page_product_list_title_wrapper">
+					<div class="order_page_product_list_title">
+						<div class="order_page_product_list_title_company">
+							<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">充值金额</div></font>
+						</div>
+						<div class="order_page_product_list_title_accountno1">
+							<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">充值方式</div></font>
+						</div>
+						<div class="order_page_product_list_title_accountno1">
+							<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">提交人</div></font>
+						</div>
+						<div class="order_page_product_list_title_accountno1">
+							<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">请求状态</div></font>
+						</div>
+						<div class="order_page_product_list_title_accountno1">
+							<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">提交时间</div></font>
+						</div>
+						<div class="order_page_product_list_title_op">
+							<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">操作</div></font>
+						</div>
+					</div>
+				</div>
+				<div class="order_page_product_item">
+					<div class="order_page_product_list_title_company_content">
+						<font class="order_page_font_gray">
+							<div class="order_page_product_price_wrapper">
+								￥12000
+							</div>
+						</font>
+					</div>
+					<div class="order_page_product_list_title_accountno1">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">陈世爵</div></font>
+					</div>
+					<div class="order_page_product_list_title_accountno1">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">陈世爵</div></font>
+					</div>
+					<div class="order_page_product_list_title_accountno1">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">等待转账</div></font>
+						<font class="order_page_font_blue">
+							<div class="order_page_product_price_wrapper">
+								图片<img src="./img/more_down.png" />
+								<div class="acbill_pic_pop">
+									<img class="acceptance_bill_small" src="./img/demo_product.jpg" />
+									<img class="acceptance_bill_small" src="./img/demo_ad1.jpg" />
+									<img class="acceptance_bill_small" src="./img/demo_ad2.jpg" />
+									<img class="acceptance_bill_small" src="./img/demo_product.jpg" />
+									<img class="acceptance_bill_small" src="./img/demo_product.jpg" />
+								</div>
+							</div>
+						</font>
+					</div>
+					<div class="order_page_product_list_title_accountno1">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">2016-04-04 23:49:18</div></font>
+					</div>
+					<div class="order_page_product_list_title_op">
+						<font class="order_page_font_red"><div class="order_page_product_price_wrapper hover_pointer" onclick="deleteProduct(1)" >取消</div></font>
+					</div>
+				</div>
+				<div class="order_page_product_item">
+					<div class="order_page_product_list_title_company_content">
+						<font class="order_page_font_gray">
+							<div class="order_page_product_price_wrapper">
+								￥12000
+							</div>
+						</font>
+					</div>
+					<div class="order_page_product_list_title_accountno1">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">陈世爵</div></font>
+					</div>
+					<div class="order_page_product_list_title_accountno1">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">陈世爵</div></font>
+					</div>
+					<div class="order_page_product_list_title_accountno1">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">等待转账</div></font>
+					</div>
+					<div class="order_page_product_list_title_accountno1">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">2016-04-04 23:49:18</div></font>
+					</div>
+					<div class="order_page_product_list_title_op">
+						<font class="order_page_font_red"><div class="order_page_product_price_wrapper hover_pointer" onclick="deleteProduct(1)" >取消</div></font>
+					</div>
+				</div>
+				<div id="content_paginator">
+					<ul class="content_paginator_ul">
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number_4">共100个</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number_3">上一页</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number_2">首页</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number">1</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number">2</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number">3</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number">4</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number">5</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number">6</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number_2">末页</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number_3">下一页</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	<div id="footer_cooperation" class="footer_item">
+		<p class="footer_h5">商务合作</p>
+		<ul class="footer_ul">
+			<li class="footer_li">供应商合作1</li>
+			<li class="footer_li">供应商合作2</li>
+			<li class="footer_li">供应商合作3</li>
+			<li class="footer_li">供应商合作4</li>
+		</ul>
+	</div>
+	<div id="footer_companyinfo" class="footer_item">
+		<p class="footer_h5">公司信息</p>
+		<ul class="footer_ul">
+			<li class="footer_li">公司信息1</li>
+			<li class="footer_li">公司信息2</li>
+			<li class="footer_li">公司信息3</li>
+			<li class="footer_li">公司信息4</li>
+		</ul>
+	</div>
+	<div id="footer_userhelp" class="footer_item">
+		<p class="footer_h5">用户帮助</p>
+		<ul class="footer_ul">
+			<li class="footer_li">用户帮助1</li>
+			<li class="footer_li">用户帮助2</li>
+			<li class="footer_li">用户帮助3</li>
+			<li class="footer_li">用户帮助4</li>
+		</ul>
+	</div>
+	<div id="footer_custom_service">
+		<img src="./img/custom_service_icon.png" />
+		<p class="footer_p">客服电话</p>
+		<p class="footer_p">028-84767883</p>
+	</div>
+</div>
+<div id="end">
+	2015智选化学 zhixuan.com 京ICP证070791号 京公网安备11010502025545号 电子公告服务规则
+</div>
+</div>
+</div>
+<div id="pop_dialog_getdeposit" class="pop_dialog_frame">
+	<div class="pop_dialog_mask">	
+	</div>
+	<div class="pop_dialog_wrapper">
+		<div class="pop_dialog_withdraw">
+			<form id="pop_getter_form">
+				<div class="pop_title">
+					<div class="pop_title_text">提现请求</div>
+					<div id="pop_dialog_frame_order_address_shutdown_button" class="pop_title_toolbar" onclick="closeGetdepostDialog()">
+						<img class="pop_title_toolbar_icon" src="./img/shutdown.png" />
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							提现金额：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input id="pop_content_getdeposit_amount_id" class="pop_content_input_invoice" type="text" onblur="checkGetAmount()" />
+						</div>
+						<div id="pop_content_getdeposit_amount_tip" class="pop_content_input_tip_hidden">请输入正确的提现金额</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							提现账户：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<select id="pop_content_getdeposit_accountno_id" class="pop_content_content_bankaccount">
+								<option value="1">陈世爵 4682031289989198</option>
+								<option value="2">肖然 4682031289989198</option>
+								<option value="3">西南 4682031289989198</option>
+								<option value="4">东北 4682031289989198</option>
+							</select>
+						</div>
+						<div id="pop_content_getdeposit_accountno_tip" class="pop_content_input_tip_hidden">请选择提现账户</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							验证码：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input id="pop_content_getdeposit_verifycode_id" class="pop_content_input_verifycode" type="text" onchange="checkCompany()" />
+							<input id="pop_content_getdeposit_verifycode_button" class="pop_content_input_verifycode_button" type="button" value="获取验证码" />
+						</div>
+						<div id="pop_content_getdeposit_verifycode_tip1" class="pop_content_input_tip_hidden">验证码错误</div>
+						<div id="pop_content_getdeposit_verifycode_tip2" class="pop_content_input_tip_hidden">已发送到手机18682731302</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input class="pop_invoice_content_button" type="button" value="提交提现请求" onclick="saveGetdepositRequest()" />
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div id="pop_dialog_transferdeposit" class="pop_dialog_frame">
+	<div class="pop_dialog_mask">	
+	</div>
+	<div class="pop_dialog_wrapper">
+		<div class="pop_dialog_transfer">
+			<form id="pop_getter_form">
+				<div class="pop_title">
+					<div class="pop_title_text">代付请求</div>
+					<div id="pop_dialog_frame_order_address_shutdown_button" class="pop_title_toolbar" onclick="closeTransferdepostDialog()">
+						<img class="pop_title_toolbar_icon" src="./img/shutdown.png" />
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							提现账户：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<select id="pop_content_transfer_acountno_select_id" class="pop_content_content_bankaccount">
+								<option value="0">新建账户</option>
+								<option value="1">陈世爵 4682031289989198</option>
+								<option value="2">肖然 4682031289989198</option>
+								<option value="3">西南 4682031289989198</option>
+								<option value="4">东北 4682031289989198</option>
+							</select>
+						</div>
+						<div id="pop_content_transfer_acountno_select_tip" class="pop_content_input_tip_hidden">请选择提现账户</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							提现金额：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input id="pop_content_transfer_amount_id" class="pop_content_input_invoice" type="text" onblur="checkTransferAmount()" />
+						</div>
+						<div id="pop_content_transfer_amount_tip" class="pop_content_input_tip_hidden">请输入正确的提现金额</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							账号：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input id="pop_content_transfer_acountno_id" class="pop_content_input_invoice" type="text" onblur="checkAccountNo()" />
+						</div>
+						<div id="pop_content_transfer_acountno_tip" class="pop_content_input_tip_hidden">请输入正确的账号</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							账户名：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input id="pop_content_transfer_acountname_id" class="pop_content_input_invoice" type="text" onblur="checkAccountName()" />
+						</div>
+						<div id="pop_content_transfer_acountname_tip" class="pop_content_input_tip_hidden">请输入正确的账户名</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							开户行：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input id="pop_content_transfer_acountbank_id" class="pop_content_input_invoice" type="text" onblur="checkAccountBank()" />
+						</div>
+						<div id="pop_content_transfer_acountbank_tip" class="pop_content_input_tip_hidden">请输入正确的开户行</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							地址：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input id="pop_content_transfer_address_id" class="pop_content_input_invoice" type="text" onblur="checkAddress()" />
+						</div>
+						<div id="pop_content_transfer_address_tip" class="pop_content_input_tip_hidden">请输入正确的地址</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							电话：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input id="pop_content_transfer_mobile_id" class="pop_content_input_invoice" type="text" onblur="checkMobile()" />
+						</div>
+						<div id="pop_content_transfer_mobile_tip" class="pop_content_input_tip_hidden">请输入正确的电话</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							验证码：
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input id="pop_content_transfer_verifycode_id" class="pop_content_input_verifycode" type="text" onchange="checkCompany()" />
+							<input id="pop_content_transfer_verifycode_button" class="pop_content_input_verifycode_button" type="button" value="获取验证码" />
+						</div>
+						<div id="pop_content_transfer_verifycode_tip1" class="pop_content_input_tip_hidden">验证码错误</div>
+						<div id="pop_content_transfer_verifycode_tip2" class="pop_content_input_tip_hidden">已发送到手机18682731302</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+						</div>
+					</div>
+					<div class="pop_dialog_invoice_right">
+						<div class="pop_content_content">
+							<input class="pop_invoice_content_button" type="button" value="提交代付请求" onclick="saveTransferRequst()" />
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>

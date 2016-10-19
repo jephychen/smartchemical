@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Chemical</title>
+<link href="./css/frame.css" rel="stylesheet" type="text/css" />
+<link href="./css/product_page.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="./js/product_page.js" charset="UTF-8"></script>
+</head>
+
+<body>
+<div id="top_bar">
+	<div id="top_bar_wrapper">
+		<ul class="top_bar_ul_left">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">保留1</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a hrsef="http://www.baidu.com"><font class="font_gray">保留2</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我是供货商</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">更多</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我的订单</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我的智选</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="cart_icon"><img src="./img/cart.png" /></li>	
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">购物车</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">登录</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">注册</font></a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="total">
+<div id="dark_blue_header">
+	<div class="dark_blue_header_wrapper">
+		<div id="dark_blue_logo">
+			<img id="dark_blue_logo_img" src="./img/logo_dark_blue.png" />
+		</div>
+		<div id="dark_blue_title">
+			<span id="dark_blue_title_span">产品中心</span>
+		</div>
+		<div id="top_navigator_right_user_page">
+			<div class="top_search_div_user_page_high">
+				<form name="search_form" action="MainSearch.action">
+					<input name="keyword" id="top_search_user_page" />
+					<div id="top_search_button"  onclick="click_submit();"><img src="./img/search_button_white.png" /></div>
+					<script>
+						function click_submit(){
+							search_form.submit();
+						}
+					</script>
+				</form>
+			</div>	
+		</div>
+	</div>
+</div>
+<div id="total_wrapper">
+
+<div id="content">
+	<div class="content_path">
+		<ul class="content_path_ul">
+			<li class="content_path_li"><a href="http://www.baidu.com">首页</a></li>
+			<li class="content_path_li"><em>></em></li>
+			<li class="content_path_li"><a href="http://www.baidu.com">分类1</a></li>
+			<li class="content_path_li"><em>></em></li>
+			<li class="content_path_li"><a href="http://www.baidu.com">钛白粉</a></li>
+		</ul>
+	</div>
+	<div id="content_product_detail">
+		<div id="content_product_detail_left">
+			<div id="content_product_detail_l">
+				<img class="content_product_detail_pic" src="./img/demo_product.png" />
+			</div>
+			<div id="content_product_detail_r">
+				<div id="content_product_detail_r_title">
+					<p class="content_product_detail_r_title">钛白粉 <font class="font_red">产品已下架</font><p>
+					<span class="content_product_detail_r_desc">关于钛白粉的描述</span>
+				</div>
+				<div id="content_product_detail_r_logistic">品牌：蓝星济南裕兴&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+					经销商：太保贸易
+				</div>
+				<div id="content_product_detail_r_price">
+					<div id="content_product_detail_r_price1">
+						<font class="content_product_detail_r_price">价格</font><font class="font_red">￥12000.00</font>
+					</div>
+					<div id="content_product_detail_r_price2">已售<a href="http://www.baidu.com">134</a>吨</div>
+				</div>
+				<div id="content_product_detail_r_logistic">物流 广东广州 至 <a href="http://www.baidu.com">四川成都</a></div>
+				<div id="content_product_detail_r_quantity">
+					<span id="content_product_detail_r_quantity">数量</span> 
+						<div id="content_product_detail_adder_div">
+							<div class="content_product_detail_adder" onclick="minusAmount()">-</div>
+							<input id="content_product_detail_adder_input" value="1" onblur="checkAmount(866)" />
+							<div class="content_product_detail_adder" onclick="plusAmount(866)">+</div>
+						</div>
+						吨 (库存866吨)
+					</div>
+				<div id="content_product_detail_r_purchase">
+					<div id="content_product_detail_r_purchase_button" class="content_product_detail_purchase_button_disable">
+						立即购买
+					</div>
+					<div id="content_product_detail_r_cart_button" class="content_product_detail_cart_button_disable"  onclick="addToCart()">
+						加入购物车
+					</div>
+				</div>
+			</div>
+			
+			<div id="content_product_detail_page">
+				<div id="content_product_detail_page_tab">
+					<ul id="content_product_detail_page_tab">
+						<li class="content_product_detail_page_tab_item">
+							<a class="content_product_detail_page_tab_item" href="http://www.baidu.com">产品介绍</a>
+						</li>
+						<li class="content_product_detail_page_tab_item">
+							<a class="content_product_detail_page_tab_item" href="http://www.baidu.com">参数</a>
+						</li>
+					</ul>
+				</div>
+				<div class="content_product_detail_page_summary">
+					<ul id="content_product_detail_page_summary">
+						<li class="content_product_detail_page_summary_item">
+							产品属性1:产品属性值1
+						</li>
+						<li class="content_product_detail_page_summary_item">
+							产品属性1:产品属性值1
+						</li>
+						<li class="content_product_detail_page_summary_item">
+							产品属性1:产品属性值1
+						</li>
+						<li class="content_product_detail_page_summary_item">
+							产品属性1:产品属性值1
+						</li>
+						<li class="content_product_detail_page_summary_item">
+							产品属性1:产品属性值1
+						</li>
+						<li class="content_product_detail_page_summary_item">
+							产品属性1:产品属性值1
+						</li>
+						<li class="content_product_detail_page_summary_item">
+							产品属性1:产品属性值1
+						</li>
+					</ul>
+				</div>
+				<div class="content_product_detail_page_detail">
+					<h3>钛白粉介绍</h3>
+					<p>钛白粉（英文名称：titanium dioxide），主要成分为二氧化钛(TiO2)的白色颜料。学名为二氧化钛（ titanium dioxide），分子式为TiO2是一种多晶化合物，其质点呈规则排列，具有格子构造。</p>
+					<h3>物理</h3>
+					<p>1）相对密度</p>
+					<p>在常用的白色颜料中，二氧化钛的相对密度最小，同等质量的白色颜料中，二氧化钛的表面积最大，颜料体积最高。</p>
+					<p>2）熔点和沸点</p>
+					<p>由于锐钛型在高温下会转变成金红石型，因此锐钛型二氧化钛的熔点和沸点实际上是不存在的。只有金红石型二氧化钛有熔点和沸点，金红石型二氧化钛的熔点为1850℃、空气中的熔点为(1830±15)℃、富氧中的熔点为1879℃，熔点与二氧化钛的纯度有关。金红石型二氧化钛的沸点为为(3200±300)℃，在此高温下二氧化钛稍有挥发性。</p>
+					<p>3）介电常数</p>
+					<p>由于二氧化钛的介电常数较高，因此具有优良的电学性能。在测定二氧化钛的某些物理性质时，要考虑二氧化钛晶体的结晶方向。锐钛型二氧化钛的介电常数比较低，只有48。</p>
+					<p>4）电导率</p>
+					<p>二氧化钛具有半导体的性能，它的电导率随温度的上升而迅速增加，而且对缺氧也非常敏感。金红石型二氧化钛的介电常数和半导体性质对电子工业非常重要，可利用该性质生产陶瓷电容器等电子元器件。</p>
+					<p>5）硬度</p>	
+					<p>按莫氏硬度十分制标度，金红石型二氧化钛为6～6.5，锐钛型二氧化钛为5.5～6.0，因此在化纤消光中为避免磨损喷丝孔而采用锐钛型。</p>
+					<p>6）吸湿性</p>
+					<p>二氧化钛虽有亲水性，但其吸湿性不太强，金红石型较锐钛型为小。二氧化钛的吸湿性与其表面积的大小有一定关系，表面积大，吸湿性高，还与表面处理与性质有关。</p>
+					<p>7）热稳定性</p>
+					<p>二氧化钛属于热稳定性好的物质。</p>
+					<p>8) 粒度</p>
+					<p>钛白粉粒度分布是一个综合性的指标，它严重影响钛白粉颜料性能和产品应用性能，因此，对于遮盖力和分散性的讨论可直接从粒度分布上进行分析。</p>
+					<p>影响钛白粉粒度分布的因素较为复杂，首先是水解原始粒径的大小，通过控制和调节水解工艺条件，使原始粒径在一定范围内。其次是煅烧温度，偏钛酸在煅烧的过程中，粒子经历一个晶型转化期和成长期，控制适宜的温度，使成长粒子在一定范围内。最后就是产品的粉碎，通常对雷蒙磨的改造和分析器转速的调节，控制粉碎质量，同时可以采用其它粉碎设备，例如：万能磨、气流粉碎机和锤磨装置。</p>
+				</div>
+			</div>
+		</div>
+		<div id="content_product_detail_right">
+			<div id="content_product_detail_right_vendor_title">商家信息</div>
+			<div id="content_product_detail_right_vendor_name">蓝星济南裕兴化工</div>
+			<div id="content_product_detail_right_vendor_icon"><img class="content_list_logo" src="./img/company_icons/nanxingyuxing.png" /></div>
+			<div id="content_product_detail_right_vendor_desc">
+				<p class="content_product_detail_right_vendor_p">所在地区:山东 济南</p>
+				<p class="content_product_detail_right_vendor_p">中国化工集团公司</p>
+				<p class="content_product_detail_right_vendor_p">另外的描述</p>		
+			</div>
+			<div id="content_product_detail_right_vendor_botton">
+				<a class="content_product_detail_right_vendor_botton" href="http://www.baidu.com">进入商家店铺</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="footer">
+	<div id="footer_cooperation" class="footer_item">
+		<p class="footer_h5">商务合作</p>
+		<ul class="footer_ul">
+			<li class="footer_li">供应商合作1</li>
+			<li class="footer_li">供应商合作2</li>
+			<li class="footer_li">供应商合作3</li>
+			<li class="footer_li">供应商合作4</li>
+		</ul>
+	</div>
+	<div id="footer_companyinfo" class="footer_item">
+		<p class="footer_h5">公司信息</p>
+		<ul class="footer_ul">
+			<li class="footer_li">公司信息1</li>
+			<li class="footer_li">公司信息2</li>
+			<li class="footer_li">公司信息3</li>
+			<li class="footer_li">公司信息4</li>
+		</ul>
+	</div>
+	<div id="footer_userhelp" class="footer_item">
+		<p class="footer_h5">用户帮助</p>
+		<ul class="footer_ul">
+			<li class="footer_li">用户帮助1</li>
+			<li class="footer_li">用户帮助2</li>
+			<li class="footer_li">用户帮助3</li>
+			<li class="footer_li">用户帮助4</li>
+		</ul>
+	</div>
+	<div id="footer_custom_service">
+		<img src="./img/custom_service_icon.png" />
+		<p class="footer_p">客服电话</p>
+		<p class="footer_p">028-84767883</p>
+	</div>
+</div>
+<div id="end">
+	2015智选化学 zhixuan.com 京ICP证070791号 京公网安备11010502025545号 电子公告服务规则
+</div>
+</div>
+</div>
+
+</body>
+</html>

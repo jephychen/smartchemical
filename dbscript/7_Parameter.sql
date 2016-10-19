@@ -1,0 +1,10 @@
+INSERT INTO smartchemical.dbo.Parameter(parameterName, parameterValue, productTypeId) VALUES (N'晶型', N'金红石型', 1);
+INSERT INTO smartchemical.dbo.Parameter(parameterName, parameterValue, productTypeId) VALUES (N'级别', N'涂料用,塑料用,通用级', 1);
+INSERT INTO smartchemical.dbo.Parameter(parameterName, parameterValue, productTypeId) VALUES (N'规格及用途', N'涂料', 1);
+INSERT INTO smartchemical.dbo.Parameter(parameterName, parameterValue, productTypeId) VALUES (N'色光', N'蓝相', 1);
+INSERT INTO smartchemical.dbo.Parameter(parameterName, parameterValue, productTypeId) VALUES (N'CAS', N'13463-67-7', 1);
+INSERT INTO smartchemical.dbo.Parameter(parameterName, parameterValue, productTypeId) VALUES (N'晶型', N'金红石型', 1);
+INSERT INTO smartchemical.dbo.Parameter(parameterName, parameterValue, productTypeId) VALUES (N'加工工艺', N'氯化法', 1);
+INSERT INTO smartchemical.dbo.Parameter(parameterName, parameterValue, productTypeId) VALUES (N'品牌', N'杜邦', 1);
+INSERT INTO smartchemical.dbo.Parameter(parameterName, parameterValue, productTypeId) VALUES (N'型号', N'R-902', 1);
+INSERT INTO smartchemical.dbo.Parameter(parameterName, parameterValue, productTypeId) VALUES (N'规格', N'吨/托盘', 1);

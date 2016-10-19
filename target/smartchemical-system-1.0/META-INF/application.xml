@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application PUBLIC
+	"-//Sun Microsystems, Inc.//DTD J2EE Application 1.3//EN"
+	"http://java.sun.com/dtd/application_1_3.dtd">
+<application>
+  <display-name>smartchemical-system</display-name>
+  <module>
+    <java>smartchemical-entities-1.0.jar</java>
+  </module>
+  <module>
+    <java>smartchemical-api-1.0.jar</java>
+  </module>
+  <module>
+    <java>smartchemical-session-frame-1.0.jar</java>
+  </module>
+  <module>
+    <web>
+      <web-uri>smartchemical-web-1.0.war</web-uri>
+      <context-root>/smartchemical-web</context-root>
+    </web>
+  </module>
+</application>

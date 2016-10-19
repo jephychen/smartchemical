@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Chemical</title>
+<link href="./css/frame.css" rel="stylesheet" type="text/css" />
+<link href="./css/user_page.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="./js/admin_product_edit.js" charset="UTF-8"></script>
+</head>
+
+<body class="background_gray">
+<div id="top_bar">
+	<div id="top_bar_wrapper">
+		<ul class="top_bar_ul_left">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">保留1</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a hrsef="http://www.baidu.com"><font class="font_gray">保留2</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我是供货商</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">更多</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我的订单</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我的智选</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="cart_icon"><img src="./img/cart.png" /></li>	
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">购物车</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">登录</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">注册</font></a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="top_navigator_red_bg">
+	<div id="top_navigator_wrapper">
+		<div id="top_navigator_logo">
+			<a href="TitaniumMainPage.action"><img id="top_navigator_logo" src="./img/logo_red_small_red_bg.png" /></a>
+		</div>
+		<div id="user_page_title">
+			<span id="user_page_title_span">管理后台</span>
+		</div>
+		<div class="user_page_navi">
+			<ul>
+				<li class="user_page_navi_li hover_pointer">
+					基础信息管理
+				</li>
+				<a href="AdminProductManagement_allProducts.action">
+				<li class="user_page_navi_li_selected hover_pointer">
+					产品管理
+				</li>
+				</a>
+				<a href="${paginator.actionName}_allProducts.action">
+				<li class="user_page_navi_li hover_pointer">
+					订单管理
+				</li>
+				</a>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="total">
+<div id="total_wrapper">
+<div id="content">
+	<div id="my_zhixuan_wrapper">
+		<div id="my_zhixuan_left">
+			<div class="my_zhixuan_menu_group">
+				<ul>
+					<li class="my_zhixuan_left_li_title">
+						产品中心
+					</li>
+					<li class="my_zhixuan_left_li">
+						<a href="${paginator.actionName}_allProducts.action">
+							<font class="font_red">所有产品</font>
+						</a>
+					</li>
+					<li class="my_zhixuan_left_li">
+						<a href="${paginator.actionName}_supplierProducts.action">
+							<font class="font_gray_light">供应商产品</font>
+						</a>
+					</li>
+					<li class="my_zhixuan_left_li">
+						<a href="${paginator.actionName}_merchantProducts.action">
+							<font class="font_gray_light">贸易商产品</font>
+						</a>
+					</li>
+					<li class="my_zhixuan_left_li">
+						<a href="${paginator.actionName}_merchantProducts.action">
+							<font class="font_gray_light">已下架的产品</font>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="my_zhixuan_right">
+			<div class="my_zhixuan_right_title">
+				<div class="my_zhixuan_right_title_text">
+					修改产品
+				</div>
+			</div>
+			<div class="my_zhixuan_right_content">
+				<div class="product_edit_title">
+					一、基本信息
+				</div>
+				<div class="product_edit_item">
+					<div class="product_edit_item_left">
+						<div class="product_edit_item_left_text">用户名：</div>
+					</div>
+					<div class="product_edit_item_right">
+						<input id="user_edit_username" class="product_edit_item_input" onblur="checkUserName()"></input>
+						<div id="pop_content_productname" class="pop_content_input_tip1_hidden">请输入4~20位汉字或英文</div>
+					</div>
+				</div>
+				<div class="product_edit_item">
+					<div class="product_edit_item_left">
+						<div class="product_edit_item_left_text">真实姓名：</div>
+					</div>
+					<div class="product_edit_item_right">
+						<input id="user_edit_realname" class="product_edit_item_input" onblur="checkRealName()"></input>
+						<div id="pop_content_productname" class="pop_content_input_tip1_hidden">请输入4~20位汉字或英文</div>
+					</div>
+				</div>
+				<div class="product_edit_item">
+					<div class="product_edit_item_left">
+						<div class="product_edit_item_left_text">密码：</div>
+					</div>
+					<div class="product_edit_item_right">
+						<input id="user_edit_password" class="product_edit_item_input" onblur="checkPassword()"></input>
+						<div id="pop_content_productname" class="pop_content_input_tip1_hidden">请输入4~20位汉字或英文</div>
+					</div>
+				</div>
+				<div class="product_edit_item">
+					<div class="product_edit_item_left">
+						<div class="product_edit_item_left_text">公司全名：</div>
+					</div>
+					<div class="product_edit_item_right">
+						<input id="user_edit_externalcompany" class="product_edit_item_input" onblur="checkExternalCompany()"></input>
+						<div id="pop_content_productno" class="pop_content_input_tip1_hidden">应为5-20位字符或数字，非数字开头</div>
+					</div>
+				</div>
+				<div class="product_edit_item">
+					<div class="product_edit_item_left">
+						<div class="product_edit_item_left_text">所在城市：</div>
+					</div>
+					<div class="product_edit_item_right">
+						<select class="product_edit_item_select">
+							<option value="0">选择区域</option>
+							<option value="1">华东</option>
+							<option value="2">华南</option>
+							<option value="3">西南</option>
+							<option value="4">东北</option>
+						</select>
+						<select class="product_edit_item_select">
+							<option value="0">选择区域</option>
+							<option value="1">广州</option>
+							<option value="2">上海</option>
+							<option value="3">浙江</option>
+							<option value="4">江苏</option>
+						</select>
+						<select class="product_edit_item_select">
+							<option value="0">选择区域</option>
+							<option value="1">广州</option>
+							<option value="2">上海</option>
+							<option value="3">杭州</option>
+							<option value="4">南京</option>
+						</select>
+						<div id="pop_content_warehouse" class="pop_content_input_tip1_hidden">请选择用户城市</div>
+					</div>
+				</div>
+				<div class="product_edit_item">
+					<div class="product_edit_item_left">
+						<div class="product_edit_item_left_text">详细地址：</div>
+					</div>
+					<div class="product_edit_item_right">
+						<input id="user_edit_address" class="product_edit_item_input" onblur="checkAddress()"></input>
+						<div id="pop_content_productno" class="pop_content_input_tip1_hidden">请输入正确的地址</div>
+					</div>
+				</div>
+				<div class="product_edit_item">
+					<div class="product_edit_item_left">
+						<div class="product_edit_item_left_text">邮箱：</div>
+					</div>
+					<div class="product_edit_item_right">
+						<input id="user_edit_email" class="product_edit_item_input" onblur="checkEmail()"></input>
+						<div id="pop_content_productno" class="pop_content_input_tip1_hidden">请输入正确的邮箱</div>
+					</div>
+				</div>
+				<div class="product_edit_item">
+					<div class="product_edit_item_left">
+						<div class="product_edit_item_left_text">手机号码：</div>
+					</div>
+					<div class="product_edit_item_right">
+						<input id="user_edit_mobile" class="product_edit_item_input" onblur="checkMobile()"></input>
+						<div id="pop_content_productno" class="pop_content_input_tip1_hidden">请输入正确的手机号码</div>
+					</div>
+				</div>
+				<div class="product_edit_title1">
+					二、高级信息
+				</div>
+				<div class="product_edit_item">
+					<div class="product_edit_item_left">
+						<div class="product_edit_item_left_text">用户角色：</div>
+					</div>
+					<div class="product_edit_item_right">
+						<select class="product_edit_item_select">
+							<option value="0">选择角色</option>
+							<option value="1">系统管理员</option>
+							<option value="2">普通用户</option>
+							<option value="3">供应商</option>
+							<option value="4">经销商</option>
+						</select>
+						<select class="product_edit_item_select">
+							<option value="0">选择供应商公司</option>
+							<option value="1">方圆钛白</option>
+							<option value="2">龙蟒集团</option>
+						</select>
+						<select class="product_edit_item_select">
+							<option value="0">选择经销商公司</option>
+							<option value="1">索莱亚</option>
+							<option value="2">诺苏化工</option>
+						</select>
+						<div id="pop_content_warehouse" class="pop_content_input_tip1_hidden">请选择用户角色</div>
+					</div>
+				</div>
+				<div class="product_edit_item">
+					<div class="product_edit_item_left">
+						<div class="product_edit_item_left_text">公司三证：</div>
+					</div>
+					<div class="product_edit_item_right">
+						<div class="product_edit_text"><font class="font_gray">审核状态</font></div>
+						<select class="product_edit_item_select">
+							<option value="0">选择状态</option>
+							<option value="1">审核中</option>
+							<option value="2">审核通过</option>
+						</select>
+						<div id="pop_content_warehouse" class="pop_content_input_tip1_hidden">请选择用户角色</div>
+					</div>
+				</div>
+				<div class="acceptance_bill_img"><img id="product_edit_pic_icon1" class="acceptance_bill_small" src="./img/demo_ad2.jpg" /></div>
+				<div class="acceptance_bill_img"><img id="product_edit_pic_icon1" class="acceptance_bill_small" src="./img/demo_ad2.jpg" /></div>
+				<div class="product_edit_title1">
+					<div class="product_edit_item_left">
+						<div class="product_edit_item_left_text"></div>
+					</div>
+					<div class="product_edit_item_right">
+						<div class="product_edit_save_button hover_pointer" onclick="saveProduct()">
+							保存
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<div id="footer_wrapper">
+	<div id="footer">
+		<div id="footer_title">
+			<ul>
+				<li class="footer_title_item">
+					联系我们
+				</li>
+				<li class="footer_title_item_divider">
+					&nbsp; 
+				</li>
+				<a href="Bulletin.action" target="_blank">
+					<li class="footer_title_item">
+						公告动态
+					</li>
+				</a>
+				<li class="footer_title_item_divider">
+					&nbsp; 
+				</li>
+				<a href="BulletinDetail.action?type=serviceagreement" target="_blank">
+					<li class="footer_title_item">
+						服务条款
+					</li>
+				</a>
+				<li class="footer_title_item_divider">
+					&nbsp; 
+				</li>
+				<a href="BulletinDetail.action?type=aboutus" target="_blank">
+					<li class="footer_title_item">
+						关于我们
+					</li>
+				</a>
+			</ul>
+		</div>
+		<div id="footer_content_contact">
+			<div id="footer_content_companyname">
+				成都智圆行方电子商务有限公司
+			</div>
+			<div id="footer_content_phone" class="footer_content_contact_item">
+				<img class="footer_content_contact_item_icon" src="./img/phone.jpg" />
+				<div class="footer_content_contact_item_text">联系电话：18081623222</div>
+			</div>
+			<div id="footer_content_email" class="footer_content_contact_item">
+				<img class="footer_content_contact_item_icon" src="./img/email.jpg" />
+				<div class="footer_content_contact_item_text">Email：service@zhixuanhuaxue.com</div>
+			</div>
+			<div id="footer_content_address" class="footer_content_contact_item">
+				<img class="footer_content_contact_item_icon" src="./img/address.jpg" />
+				<div class="footer_content_contact_item_text">地址：中国·成都·天府创新中心</div>
+			</div>
+		</div>
+	</div>
+	<div id="end">
+		2016智选化学 www.zhixuanhuaxue.com 蜀ICP备16000357
+	</div>
+</div>
+<div id="pop_dialog_warehouse" class="pop_dialog_frame">
+	<div class="pop_dialog_mask">	
+	</div>
+	<div class="pop_dialog_wrapper">
+		<div class="pop_dialog_warehouse">
+			<form id="pop_getter_form">
+				<div class="pop_title">
+					<div class="pop_title_text">编辑仓库信息</div>
+					<div id="pop_dialog_frame_order_address_shutdown_button" class="pop_title_toolbar" onclick="closeWarehouseDialog()">
+						<img class="pop_title_toolbar_icon" src="./img/shutdown.png" />
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							仓库名：
+						</div>
+					</div>
+					<div class="pop_dialog_warehouse_right">
+						<div class="pop_content_content">
+							<input id="pop_content_input_warehouse_name" class="pop_content_input_invoice" type="text" onblur="checkWarehouseName()" />
+						</div>
+						<div id="pop_content_input_warehousename_tip" class="pop_content_input_tip_hidden">请输入2~15位汉字</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							仓库地区：
+						</div>
+					</div>
+					<div class="pop_dialog_warehouse_right">
+						<div class="pop_content_content">
+							<select class="pop_content_dropdown" >
+								<option>四川</option>
+								<option>广东</option>
+							</select>
+							<select class="pop_content_dropdown" >
+								<option>成都市</option>
+								<option>德阳市</option>
+							</select>
+							<select class="pop_content_dropdown" >
+								<option>彭州市</option>
+								<option>双流县</option>
+							</select>
+						</div>
+						<div id="pop_content_input_invoice_tip" class="pop_content_input_tip_hidden">请输选择地区</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							详细地址：
+						</div>
+					</div>
+					<div class="pop_dialog_warehouse_right">
+						<div class="pop_content_content">
+							<input id="pop_content_input_address_id" class="pop_content_input_invoice" type="text" onblur="checkAddress()" />
+						</div>
+						<div id="pop_content_input_address_tip" class="pop_content_input_tip_hidden">请输入正确的地址</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							仓库管理员：
+						</div>
+					</div>
+					<div class="pop_dialog_warehouse_right">
+						<div class="pop_content_content">
+							<input id="pop_content_input_whadmin_id" class="pop_content_input_invoice" type="text" onblur="checkWhAdminName()" />
+						</div>
+						<div id="pop_content_input_whadmin_tip" class="pop_content_input_tip_hidden">请输入正确的姓名</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+							库管员电话：
+						</div>
+					</div>
+					<div class="pop_dialog_warehouse_right">
+						<div class="pop_content_content">
+							<input id="pop_content_input_whadminmobile_id" class="pop_content_input_invoice" type="text" onblur="checkWhAdminMobile()" />
+						</div>
+						<div id="pop_content_input_whadminmobile_tip" class="pop_content_input_tip_hidden">请输入正确的电话</div>
+					</div>
+				</div>
+				<div class="pop_content_item">
+					<div class="pop_content_item_left">
+						<div class="pop_content_title">
+						</div>
+					</div>
+					<div class="pop_dialog_warehouse_right">
+						<div class="pop_content_content">
+							<input class="pop_invoice_content_button" type="button" value="保存发票信息" onclick="saveWarehouse()" />
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>

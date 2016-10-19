@@ -1,0 +1,264 @@
+/* CSS Document */
+
+/*content*/
+div#content_mainsearch
+{
+	overflow:hidden;
+	background-color:white;
+	padding:0 20px 20px 20px;
+}
+div#content_filter
+{
+	float:left;
+	border:1px solid #eaeaea;
+	margin-top:5px;
+}
+li.content_filter_condition
+{
+	float:left;
+	list-style:none;
+	position:relative;
+	font-family: "Microsoft YaHei";
+	font-size:13px;
+	margin:3px 2px 3px 2px;
+}
+li.content_filter_condition_cancel
+{
+	float:left;
+	list-style:none;
+	position:relative;
+	font-family: "Microsoft YaHei";
+	font-size:13px;
+	margin:3px 2px 3px 2px;
+}
+.gray_wrapper
+{
+	border:1px solid #eaeaea;
+}
+div.content_filter_statistic
+{
+	height:38px;
+	position:relative;
+	border:1px solid #eaeaea;
+	background-color:#F1F1F1;
+}
+span.content_filter_statistic_title
+{
+	position:absolute;
+	top:8px;
+	left:17px;
+	font-family: "Microsoft YaHei";
+	font-weight:500;
+	font-size:15px;
+	color:#666666;
+}
+div.content_filter_item
+{
+	float:left;
+	width:958px;
+	overflow:none;
+	border-bottom:1px solid #eaeaea;
+}
+div.content_filter_item_title
+{
+	float:left;
+	height:18px;
+	width:66px;
+	padding-top:8px;
+	padding-left:18px;
+}
+div.content_filter_item_content
+{
+	overflow:none;
+	position:relative;
+	float:left;
+	width:800px;
+	border-left:1px solid #eaeaea;
+}
+ul.content_filter_item_content_ul
+{
+	
+}
+li.content_filter_item_content_li
+{
+	list-style:none;
+	float:left;
+	position:relative;
+	font-family: "Microsoft YaHei";
+	font-size:13px;
+	margin:5px 10px 5px 10px;
+	padding:3px 5px 3px 5px;
+	color:#666666;
+}
+li.content_filter_item_content_li:hover
+{
+	background-color:#3b84d6;
+	color:white;
+}
+li.content_filter_item_content_li_region
+{
+	list-style:none;
+	float:left;
+	font-family: "Microsoft YaHei";
+	font-size:13px;
+	margin:5px 10px 5px 10px;
+	padding:3px 5px 3px 5px;
+	color:#666666;
+}
+li.content_filter_item_content_li_region:hover > .content_filter_item_content_span_region
+{
+	background-color:#3b84d6;
+	color:white;
+	z-index:1001;
+}
+li.content_filter_item_content_li_region:hover > div.content_filter_item_content_region
+{
+	display:block;
+	z-index:1000;
+}
+.content_filter_item_content_span_region
+{
+	padding:3px 5px 3px 5px;
+}
+.content_filter_selected
+{
+	background-color:#3b84d6;
+	color:white;
+}
+div.content_filter_item_content_region
+{
+	top:26px;
+	left:52px;
+	width:780px;
+	overflow:none;
+	display:none;
+	position:absolute;
+	background-color:white;
+	border:1px solid #eaeaea;
+	margin-top:2px;
+	padding:7px;
+}
+li.content_filter_item_content_region_province
+{
+	list-style:none;
+	padding:5px 0 10px 0;
+	width:76px;
+	text-align:center;
+	float:left;
+	color:#666666;
+}
+li.content_filter_item_content_region_province:hover > .content_filter_item_content_span_region
+{
+	background-color:#3b84d6;
+	color:white;
+}
+li.content_filter_item_content_region_province:hover > div.content_filter_item_content_city
+{
+	display:block;
+}
+div.content_filter_item_content_city
+{
+	display:none;
+	position:absolute;
+	width:780px;
+	top:38px;
+	left:-1px;
+	padding:7px;
+	background-color:white;
+	border:1px solid #eaeaea;
+	color:#666666;
+}
+li.content_filter_item_content_region_city
+{
+	list-style:none;
+	padding:5px 0 5px 0;
+	width:76px;
+	text-align:center;
+	float:left;
+}
+li.content_filter_item_content_region_city:hover > .content_filter_item_content_span_region
+{
+	background-color:#3b84d6;
+	color:white;
+}
+span.content_filter_item_title
+{
+	font-family: "Microsoft YaHei";
+	font-size:13px;
+}
+div#content_sort
+{
+	margin-top:20px;
+	height:38px;
+	width:958px;
+	float:left;
+	border:1px solid #eaeaea;
+	background-color:#f9f9f9;
+}
+div.content_sort_item
+{
+	width:62px;
+	height:26px;
+	padding-left:25px;
+	padding-top:10px;
+}
+span.content_sort_item_text
+{
+	float:left;
+}
+img.content_sort_img
+{
+	float:left;
+}
+ul.content_sort_ul
+{
+	margin:0;
+	padding:0;
+}
+li.content_sort_li
+{
+	list-style:none;
+	float:left;
+	font-family: "Microsoft YaHei";
+	font-size:13px;
+	border-right:1px solid #eaeaea;
+}
+div#content_list_wrapper
+{
+	width:958px;
+	text-align:center;
+	position:relative;
+	overflow:hidden;
+	border:1px solid #eaeaea;
+}
+div#content_list
+{
+	overflow:hidden;
+	position:relative;
+	margin:0 auto;
+	text-align:justify;
+	width:958px;
+}
+ul.content_list_item_ul
+{
+}
+li.content_list_item_li
+{
+	list-style:none;
+	float:left;
+	margin:15px 12px 15px 12px;
+}
+span.content_list_item_price
+{
+	font-size:16px;
+	color:red;
+}
+span.content_list_item_amount
+{
+	float:right;
+	margin-top:3px;
+}
+.left_margin_13px
+{
+	margin-left:13px;
+}

@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Chemical</title>
+<link href="./css/frame.css" rel="stylesheet" type="text/css" />
+<link href="./css/user_page.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="./js/admin_product_management.js" charset="UTF-8"></script>
+</head>
+
+<body class="background_gray">
+<div id="top_bar">
+	<div id="top_bar_wrapper">
+		<ul class="top_bar_ul_left">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">保留1</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a hrsef="http://www.baidu.com"><font class="font_gray">保留2</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我是供货商</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">更多</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我的订单</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">我的智选</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="cart_icon"><img src="./img/cart.png" /></li>	
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">购物车</font></a></li>
+		</ul>
+		<ul class="top_bar_ul_right">
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">登录</font></a></li>
+			<li class="fence_icon"><img src="./img/fence1.png" /></li>
+			<li class="top_bar_li"><a href="http://www.baidu.com"><font class="font_gray">注册</font></a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="top_navigator_red_bg">
+	<div id="top_navigator_wrapper">
+		<div id="top_navigator_logo">
+			<a href="TitaniumMainPage.action"><img id="top_navigator_logo" src="./img/logo_red_small_red_bg.png" /></a>
+		</div>
+		<div id="user_page_title">
+			<span id="user_page_title_span">管理后台</span>
+		</div>
+		<div class="user_page_navi">
+			<ul>
+				<li class="user_page_navi_li_selected hover_pointer">
+					基础信息管理
+				</li>
+				<a href="AdminProductManagement_allProducts.action">
+				<li class="user_page_navi_li hover_pointer">
+					产品管理
+				</li>
+				</a>
+				<a href="${paginator.actionName}_allProducts.action">
+				<li class="user_page_navi_li hover_pointer">
+					订单管理
+				</li>
+				</a>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="total">
+<div id="total_wrapper">
+<div id="content">
+	<div id="my_zhixuan_wrapper">
+		<div id="my_zhixuan_left">
+			<div class="my_zhixuan_menu_group">
+				<ul>
+					<li class="my_zhixuan_left_li_title">
+						用户管理
+					</li>
+					<li class="my_zhixuan_left_li">
+						<a href="${paginator.actionName}_allUsers.action">
+							<font class="font_red">所有用户</font>
+						</a>
+					</li>
+					<li class="my_zhixuan_left_li">
+						<a href="${paginator.actionName}_merchantUsers.action">
+							<font class="font_gray_light">贸易商用户</font>
+						</a>
+					</li>
+					<li class="my_zhixuan_left_li">
+						<a href="${paginator.actionName}_supplierUsers.action">
+							<font class="font_gray_light">供应商用户</font>
+						</a>
+					</li>
+					<li class="my_zhixuan_left_li">
+						<a href="${paginator.actionName}_commonUsers.action">
+							<font class="font_gray_light">普通用户</font>
+						</a>
+					</li>
+					<li class="my_zhixuan_left_li">
+						<a href="${paginator.actionName}_adminUsers.action">
+							<font class="font_gray_light">系统管理员</font>
+						</a>
+					</li>
+					<li class="my_zhixuan_left_li">
+						<a href="${paginator.actionName}_warehouseAdminUsers.action">
+							<font class="font_gray_light">仓库管理员</font>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="my_zhixuan_right">
+			<div class="my_zhixuan_right_title">
+				<div class="my_zhixuan_right_title_text">
+					所有用户
+				</div>
+			</div>
+			<div class="my_zhixuan_right_content">
+				<form id="users_search" method="post">
+				</form>
+				<div class="product_list_filters">
+					<div class="product_list_filter_item">
+						<div class="product_list_filter_item_left">
+							搜索用户：
+						</div>
+						<div class="product_list_filter_item_right">
+							<input id="user_list_search_input" class="product_list_filter_item_input" onkeydown="if(event.keyCode==13){submit_user_search_form();}" />
+						</div>
+					</div>
+					<div class="product_list_create_button hover_pointer">
+						新建用户
+					</div>
+				</div>
+				<div class="order_page_product_list_title_wrapper">
+					<div class="order_page_product_list_title">
+						<div class="user_list_title_username">
+							<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">用户名</div></font>
+						</div>
+						<div class="user_list_title_companyname">
+							<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">公司名</div></font>
+						</div>
+						<div class="user_list_title_mobile">
+							<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">手机号</div></font>
+						</div>
+						<div class="user_list_title_role">
+							<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">角色</div></font>
+						</div>
+						<div class="user_list_title_createtime">
+							<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">创建时间</div></font>
+						</div>
+						<div class="user_list_title_op">
+							<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">操作</div></font>
+						</div>
+					</div>
+				</div>
+				<div class="order_page_product_item">
+					<div class="user_list_title_username_item">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">lizhangyao</div></font>
+					</div>
+					<div class="user_list_title_companyname">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">成都智圆行方电子商务有限公司</div></font>
+					</div>
+					<div class="user_list_title_mobile">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">18682731302</div></font>
+					</div>
+					<div class="user_list_title_role">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">管理员</div></font>
+					</div>
+					<div class="user_list_title_createtime">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">2015-12-27 21:55:44</div></font>
+					</div>
+					<div class="user_list_title_op">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">修改</div></font>
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">删除</div></font>
+					</div>
+				</div>
+				<div class="order_page_product_item">
+					<div class="user_list_title_username_item">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">lizhangyao</div></font>
+					</div>
+					<div class="user_list_title_companyname">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">成都智圆行方电子商务有限公司</div></font>
+					</div>
+					<div class="user_list_title_mobile">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">18682731302</div></font>
+					</div>
+					<div class="user_list_title_role">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">管理员</div></font>
+					</div>
+					<div class="user_list_title_createtime">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">2015-12-27 21:55:44</div></font>
+					</div>
+					<div class="user_list_title_op">
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">修改</div></font>
+						<font class="order_page_font_gray"><div class="order_page_product_price_wrapper">删除</div></font>
+					</div>
+				</div>
+				<div id="content_paginator">
+					<ul class="content_paginator_ul">
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number_4">共100个</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number_3">上一页</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number_2">首页</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number">1</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number">2</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number">3</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number">4</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number">5</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number">6</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number_2">末页</div>
+							</a>
+						</li>
+						<li class="content_paginator_li">
+							<a href="http://www.baidu.com">
+								<div class="content_paginator_number_3">下一页</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<div id="footer_wrapper">
+	<div id="footer">
+		<div id="footer_title">
+			<ul>
+				<li class="footer_title_item">
+					联系我们
+				</li>
+				<li class="footer_title_item_divider">
+					&nbsp; 
+				</li>
+				<a href="Bulletin.action" target="_blank">
+					<li class="footer_title_item">
+						公告动态
+					</li>
+				</a>
+				<li class="footer_title_item_divider">
+					&nbsp; 
+				</li>
+				<a href="BulletinDetail.action?type=serviceagreement" target="_blank">
+					<li class="footer_title_item">
+						服务条款
+					</li>
+				</a>
+				<li class="footer_title_item_divider">
+					&nbsp; 
+				</li>
+				<a href="BulletinDetail.action?type=aboutus" target="_blank">
+					<li class="footer_title_item">
+						关于我们
+					</li>
+				</a>
+			</ul>
+		</div>
+		<div id="footer_content_contact">
+			<div id="footer_content_companyname">
+				成都智圆行方电子商务有限公司
+			</div>
+			<div id="footer_content_phone" class="footer_content_contact_item">
+				<img class="footer_content_contact_item_icon" src="./img/phone.jpg" />
+				<div class="footer_content_contact_item_text">联系电话：18081623222</div>
+			</div>
+			<div id="footer_content_email" class="footer_content_contact_item">
+				<img class="footer_content_contact_item_icon" src="./img/email.jpg" />
+				<div class="footer_content_contact_item_text">Email：service@zhixuanhuaxue.com</div>
+			</div>
+			<div id="footer_content_address" class="footer_content_contact_item">
+				<img class="footer_content_contact_item_icon" src="./img/address.jpg" />
+				<div class="footer_content_contact_item_text">地址：中国·成都·天府创新中心</div>
+			</div>
+		</div>
+	</div>
+	<div id="end">
+		2016智选化学 www.zhixuanhuaxue.com 蜀ICP备16000357
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="default" namespace="/" extends="struts-default">
+		<interceptors>
+			<interceptor name="authpurchase" class="com.smartchemical.interceptor.AuthInterceptorPurchase" />
+			<interceptor name="authcommon" class="com.smartchemical.interceptor.AuthInterceptorCommon" />
+			<interceptor name="authmerchant" class="com.smartchemical.interceptor.AuthInterceptorMerchant" />
+			<interceptor name="authsupplier" class="com.smartchemical.interceptor.AuthInterceptorSupplier" />
+			<interceptor name="authadmin" class="com.smartchemical.interceptor.AuthInterceptorAdmin" />
+			<interceptor name="autologin" class="com.smartchemical.interceptor.AutoLoginInterceptor" />
+			<interceptor-stack name="myAuthCommon">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="authcommon" />
+			</interceptor-stack>
+			<interceptor-stack name="myAuthMerchant">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="authmerchant" />
+			</interceptor-stack>
+			<interceptor-stack name="myAuthSupplier">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="authsupplier" />
+			</interceptor-stack>
+			<interceptor-stack name="myAuthAdmin">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="authadmin" />
+			</interceptor-stack>
+			<interceptor-stack name="myAutoLogin">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="autologin" />		
+			</interceptor-stack>
+		</interceptors>
+		
+		<global-results>
+			<result name="error">/jsp/error.jsp</result>
+			<result name="login" type="redirectAction">Login</result>
+		</global-results>
+	
+		<action name="CommonAjax_*" class="com.smartchemical.common.ajax.CommonAjaxAction" method="{1}">
+			<result>/jsp/user/admin_user_management.jsp</result>
+			<result type="stream">  
+                <param name="inputName">inputStream</param>  
+            </result> 
+        </action>
+		<action name="Verify" class="com.smartchemical.test.VerifyAction">
+			<result name="success" type="redirectAction">TitaniumMainPage</result>
+			<result name="error">/jsp/verify.jsp</result>
+        </action>
+        <action name="MainSearch" class="com.smartchemical.frame.search.MainSearchAction">
+			<result name="success">/jsp/main_search.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+        </action>
+		<action name="TitaniumMainPage" class="com.smartchemical.frame.finechemical.titanium.MainPageAction">
+			<result name="success">/jsp/main_page_titanium_dioxide.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+        </action>
+		<action name="ProductDetail" class="com.smartchemical.frame.productdetail.ProductDetailAction">
+			<result name="success">/jsp/product_detail.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+        </action>
+		<action name="Register" class="com.smartchemical.frame.register.RegisterAction">
+			<result name="success">/jsp/register.jsp</result>
+			<result name="toregister1" type="redirectAction">Register1</result>
+        </action>
+		<action name="Register1" class="com.smartchemical.frame.register.RegisterAction" method="register1">
+			<result name="success">/jsp/register1.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="Register1Submit" class="com.smartchemical.frame.register.RegisterAction" method="submitRegister1">
+			<result name="success">/jsp/register1.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="RegisterAjax_*" class="com.smartchemical.frame.register.RegisterAjaxAction" method="{1}">
+			<result>/jsp/register.jsp</result>
+			<result type="stream">  
+                <param name="inputName">inputStream</param>  
+            </result>
+        </action>
+		<action name="Login" class="com.smartchemical.frame.login.LoginAction">
+			<result name="input">/jsp/login.jsp</result>
+			<result name="success" type="redirectAction">TitaniumMainPage</result>
+			<result name="back">/jsp/back2.jsp</result>
+        </action>
+		<action name="Logout" class="com.smartchemical.frame.login.LoginAction" method="logout">
+			<result name="success" type="redirectAction">TitaniumMainPage</result>
+			<result name="back">/jsp/back1.jsp</result>
+        </action>
+		<action name="CartSuccess" class="com.smartchemical.frame.order.CartSuccess">
+			<result name="success">/jsp/cart_success.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="Cart" class="com.smartchemical.frame.order.CartProcessor">
+			<result name="success">/jsp/cart.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="CartAjax_*" class="com.smartchemical.frame.order.CartAjaxAction" method="{1}">
+			<result>/jsp/cart.jsp</result>
+			<result type="stream">  
+                <param name="inputName">inputStream</param>  
+            </result> 
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="Order" class="com.smartchemical.frame.order.OrderAction">
+			<result name="success">/jsp/order.jsp</result>
+			<result name="tosearh" type="redirectAction">MainSearch</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+			<interceptor-ref name="authpurchase"/>
+        </action>
+		<action name="OrderImmediately" class="com.smartchemical.frame.order.OrderAction" method="orderWithoutCarts">
+			<result name="success">/jsp/order.jsp</result>
+			<result name="tosearh" type="redirectAction">MainSearch</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+			<interceptor-ref name="authpurchase"/>
+        </action>
+		<action name="NotFinished" class="com.smartchemical.frame.system.NotFinishedAction">
+			<result name="success">/jsp/not_finished.jsp</result>
+        </action>
+		<action name="ReceiverGetterAjax_*" class="com.smartchemical.frame.order.ReceiverGetterAjaxAction" method="{1}">
+			<result>/jsp/order.jsp</result>
+			<result type="stream">  
+                <param name="inputName">inputStream</param>  
+            </result> 
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="RegionAjax_*" class="com.smartchemical.frame.order.RegionAjax" method="{1}">
+			<result>/jsp/order.jsp</result>
+			<result type="stream">  
+                <param name="inputName">inputStream</param>  
+            </result> 
+        </action>
+		<action name="OrderSubmit" class="com.smartchemical.frame.order.OrderSubmitAction">
+			<result name="toonlinepay" type="redirectAction">
+				<param name="actionName">OnlinePay</param>
+				<param name="poId">${poId}</param>
+			</result>
+			<result name="totransferpay" type="dispatcher">
+				<param name="location">/jsp/pay_transfer_success.jsp</param>
+				<param name="poId">${poId}</param>
+			</result>
+			<result name="toacceptancebillpay" type="redirectAction">
+				<param name="actionName">AcceptanceBillPay</param>
+				<param name="poId">${poId}</param>
+			</result>
+			<result name="todepositpay" type="dispatcher">
+				<param name="location">/jsp/pay_deposit_success.jsp</param>
+				<param name="poNo">${poNo}</param>
+			</result>
+			<result name="tosearh" type="redirectAction">MainSearch</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="OnlinePay" class="com.smartchemical.frame.order.OnlinePayAction">
+			<result name="success">/jsp/pay_online.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="OnlinePaySubmit" class="com.smartchemical.frame.order.OnlinePayAction" method="onlinePaySubmit">
+			<result name="success">/jsp/pay_online.jsp</result>
+			<result name="tosuccess">/jsp/pay_online_success.jsp</result>
+			<result name="tofailed">/jsp/pay_online_failed.jsp</result>
+			<result name="topay">/jsp/mobaopay.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="OnlinePayCallback" class="com.smartchemical.frame.order.OnlinePayCallback">
+			<result name="successpage">/jsp/pay_online_success.jsp</result>
+			<result name="success" type="redirect">/jsp/notify.jsp</result>
+			<result name="payerror">/jsp/pay_online_failed.jsp</result>
+        </action>
+		<action name="OnlineRecharge" class="com.smartchemical.frame.order.OnlinePayAction">
+			<result name="success">/jsp/pay_online.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="AcceptanceBillPay" class="com.smartchemical.frame.order.AcceptanceBillPayAction">
+			<result name="success">/jsp/pay_acceptancebill.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="AcceptanceBillPaySubmit" class="com.smartchemical.frame.order.AcceptanceBillPayAction" method="submitBill">
+			<result name="success">/jsp/pay_acceptancebill.jsp</result>
+			<result name="tosuccess">/jsp/pay_acceptancebill_success.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="AcceptanceBillRechargeSubmit" class="com.smartchemical.usercenter.commonuser.AcceptanceBillRechargeAction" method="submitRequest">
+			<result name="success">/jsp/user/common_acceptancebill_recharge_success.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="AcceptanceBillAjax_*" class="com.smartchemical.frame.order.AcceptanceBillPayAjaxAction" method="{1}">
+			<result>/jsp/pay_acceptancebill.jsp</result>
+			<result type="stream">  
+                <param name="inputName">inputStream</param>  
+            </result> 
+			<interceptor-ref name="fileUpload">
+                <param name="allowedTypes">
+                    image/bmp,image/png,image/gif,image/jpeg,image/jpg,image/BMP,image/PNG,image/GIF,image/JPEG,image/JPG
+                </param>
+                <param name="maximumSize">5242880</param>
+            </interceptor-ref>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="AcceptanceBillRecharge" class="com.smartchemical.usercenter.commonuser.AcceptanceBillRechargeAction">
+			<result name="success">/jsp/user/common_acceptancebill_recharge.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="QueryOrder_*" class="com.smartchemical.usercenter.commonuser.QueryOrderAction" method="{1}">
+			<result name="success" type="dispatcher">
+				<param name="location">/jsp/common_user_page.jsp</param>
+				<param name="currentPage">${currentPage}</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="AdminQueryOrder_*" class="com.smartchemical.usercenter.adminuser.QueryOrderAction" method="{1}">
+			<result name="success" type="dispatcher">
+				<param name="location">/jsp/admin_user_page.jsp</param>
+				<param name="currentPage">${currentPage}</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthAdmin"/>
+        </action>
+		<action name="AdminProductManagement_*" class="com.smartchemical.usercenter.adminuser.ProductManagementAction" method="{1}">
+			<result name="success" type="dispatcher">
+				<param name="location">/jsp/user/admin_product_management.jsp</param>
+				<param name="currentPage">${currentPage}</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthAdmin"/>
+        </action>
+		<action name="AdminProductEdit" class="com.smartchemical.usercenter.adminuser.ProductEditAction">
+			<result name="success">/jsp/user/admin_product_edit.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthAdmin"/>
+        </action>
+		<action name="AdminProductAdd" class="com.smartchemical.usercenter.adminuser.ProductEditAction" method="addProduct">
+			<result name="success">/jsp/user/admin_product_add.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthAdmin"/>
+        </action>
+		<action name="AdminProductSubmit_*" class="com.smartchemical.usercenter.adminuser.ProductAddEditSubmitAction" method="{1}">
+			<result name="success" type="redirectAction">
+				<param name="actionName">AdminProductManagement_${returnAction}</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthAdmin"/>
+        </action>
+		<action name="AdminCompanyManagement_*" class="com.smartchemical.usercenter.adminuser.CompanyManagementAction" method="{1}">
+			<result name="success" type="dispatcher">
+				<param name="location">/jsp/user/admin_company_management.jsp</param>
+				<param name="currentPage">${currentPage}</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthAdmin"/>
+        </action>
+		<action name="AdminCompanyEdit" class="com.smartchemical.usercenter.adminuser.CompanyEditAction">
+			<result name="success">/jsp/user/admin_company_edit.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthAdmin"/>
+        </action>
+		<action name="AdminCompanyAdd" class="com.smartchemical.usercenter.adminuser.CompanyEditAction" method="addCompany">
+			<result name="success">/jsp/user/admin_company_add.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthAdmin"/>
+        </action>
+		<action name="AdminCompanySubmit_*" class="com.smartchemical.usercenter.adminuser.CompanyAddEditSubmitAction" method="{1}">
+			<result name="success" type="redirectAction">
+				<param name="actionName">AdminCompanyManagement_${returnAction}</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthAdmin"/>
+        </action>
+		<action name="AdminWarehouseManagement_*" class="com.smartchemical.usercenter.adminuser.WarehouseManagementAction" method="{1}">
+			<result name="success" type="dispatcher">
+				<param name="location">/jsp/user/admin_warehouse_management.jsp</param>
+				<param name="currentPage">${currentPage}</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthAdmin"/>
+        </action>
+		<action name="AdminUserManagement_*" class="com.smartchemical.usercenter.adminuser.UserManagementAction" method="{1}">
+			<result name="success" type="dispatcher">
+				<param name="location">/jsp/user/admin_user_management.jsp</param>
+				<param name="currentPage">${currentPage}</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthAdmin"/>
+        </action>
+		<action name="AdminUserEdit" class="com.smartchemical.usercenter.adminuser.UserEditAction">
+			<result name="success">/jsp/user/admin_user_edit.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthAdmin"/>
+        </action>
+		<action name="AdminUserAdd" class="com.smartchemical.usercenter.adminuser.UserEditAction" method="addUser">
+			<result name="success">/jsp/user/admin_user_add.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthAdmin"/>
+        </action>
+		<action name="AdminUserSubmit_*" class="com.smartchemical.usercenter.adminuser.UserAddEditSubmitAction" method="{1}">
+			<result name="success" type="redirectAction">
+				<param name="actionName">AdminUserManagement_${returnAction}</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthAdmin"/>
+        </action>
+		<action name="AdminDepositRequestManagement_*" class="com.smartchemical.usercenter.adminuser.DepositRequestManagementAction" method="{1}">
+			<result name="success">/jsp/user/admin_deposit_request_management.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthAdmin"/>
+        </action>
+		<action name="AdminRechargeRequestManagement_*" class="com.smartchemical.usercenter.adminuser.RechargeRequestManagementAction" method="{1}">
+			<result name="allrequests">/jsp/user/admin_recharge_request_management.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthAdmin"/>
+        </action>
+		<action name="MerchantQueryOrder_*" class="com.smartchemical.usercenter.merchantuser.QueryOrderAction" method="{1}">
+			<result name="success" type="dispatcher">
+				<param name="location">/jsp/user/merchant_user_page.jsp</param>
+				<param name="currentPage">${currentPage}</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthMerchant"/>
+        </action>
+		<action name="MerchantProductManagement_*" class="com.smartchemical.usercenter.merchantuser.ProductManagementAction" method="{1}">
+			<result name="success" type="dispatcher">
+				<param name="location">/jsp/user/merchant_product_management.jsp</param>
+				<param name="currentPage">${currentPage}</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthMerchant"/>
+        </action>
+		<action name="MerchantProductEdit" class="com.smartchemical.usercenter.merchantuser.ProductEditAction">
+			<result name="success">/jsp/user/merchant_product_edit.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthMerchant"/>
+        </action>
+		<action name="MerchantProductAdd" class="com.smartchemical.usercenter.merchantuser.ProductEditAction" method="addProduct">
+			<result name="success">/jsp/user/merchant_product_add.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthMerchant"/>
+        </action>
+		<action name="MerchantProductSubmit_*" class="com.smartchemical.usercenter.merchantuser.ProductAddEditSubmitAction" method="{1}">
+			<result name="success" type="redirectAction">
+				<param name="actionName">MerchantProductManagement_${returnAction}</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthMerchant"/>
+        </action>
+		<action name="SupplierQueryOrder_*" class="com.smartchemical.usercenter.supplieruser.QueryOrderAction" method="{1}">
+			<result name="success" type="dispatcher">
+				<param name="location">/jsp/user/supplier_user_page.jsp</param>
+				<param name="currentPage">${currentPage}</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthSupplier"/>
+        </action>
+		<action name="SupplierProductManagement_*" class="com.smartchemical.usercenter.supplieruser.ProductManagementAction" method="{1}">
+			<result name="success" type="dispatcher">
+				<param name="location">/jsp/user/supplier_product_management.jsp</param>
+				<param name="currentPage">${currentPage}</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthSupplier"/>
+        </action>
+		<action name="SupplierProductEdit" class="com.smartchemical.usercenter.supplieruser.ProductEditAction">
+			<result name="success">/jsp/user/supplier_product_edit.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthSupplier"/>
+        </action>
+		<action name="SupplierProductAdd" class="com.smartchemical.usercenter.supplieruser.ProductEditAction" method="addProduct">
+			<result name="success">/jsp/user/supplier_product_add.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthSupplier"/>
+        </action>
+		<action name="SupplierProductSubmit_*" class="com.smartchemical.usercenter.supplieruser.ProductAddEditSubmitAction" method="{1}">
+			<result name="success" type="redirectAction">
+				<param name="actionName">SupplierProductManagement_${returnAction}</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthSupplier"/>
+        </action>
+		<action name="MyZhixuan" class="com.smartchemical.usercenter.commonuser.QueryOrderAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/jsp/my_zhixuan.jsp</param>
+				<param name="currentPage">${currentPage}</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="UserEdit_*" class="com.smartchemical.usercenter.commonuser.UserEditAction" method="{1}">
+			<result name="success">/jsp/user/common_password_edit.jsp</result>
+			<result name="toresult" type="dispatcher">
+				<param name="location">/jsp/user/common_useredit_result.jsp</param>
+				<param name="title">${title}</param>
+				<param name="tip">${tip}</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="BankAccountEdit_*" class="com.smartchemical.usercenter.commonuser.BankAccountEditAction" method="{1}">
+			<result name="success">/jsp/user/common_bankaccount_edit.jsp</result>
+			<result name="toresult" type="dispatcher">
+				<param name="location">/jsp/user/common_useredit_result.jsp</param>
+				<param name="title">${title}</param>
+				<param name="tip">${tip}</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="DepositRequestManagement_*" class="com.smartchemical.usercenter.commonuser.DepositRequestManagementAction" method="{1}">
+			<result name="success">/jsp/user/common_deposit_request_management.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="RechargeRequestManagement_*" class="com.smartchemical.usercenter.commonuser.RechargeRequestManagementAction" method="{1}">
+			<result name="newrequest">/jsp/user/common_recharge_request.jsp</result>
+			<result name="allrequests">/jsp/user/common_recharge_request_management.jsp</result>
+			<result name="toacceptancebillrecharge" type="redirectAction">
+				<param name="actionName">AcceptanceBillRecharge</param>
+				<param name="amount">${amount}</param>
+				<param name="requestId">${requestId}</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="OrderDetail" class="com.smartchemical.frame.order.OrderDetailAction">
+			<result name="success">/jsp/order_detail.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		<action name="Company" class="com.smartchemical.frame.company.CompanyAction">
+			<result name="success">/jsp/company.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+		</action>
+		<action name="AllCompanies" class="com.smartchemical.frame.company.AllCompaniesAction">
+			<result name="success">/jsp/company_overall.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+		</action>
+		<action name="BulletinDetail" class="com.smartchemical.frame.system.BulletinDetailAction">
+			<result name="success">/jsp/bulletin_detail.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+		</action>
+		<action name="Bulletin" class="com.smartchemical.frame.system.BulletinAction">
+			<result name="success">/jsp/bulletin.jsp</result>
+			<interceptor-ref name="myAutoLogin"/>
+		</action>
+		<action name="DepositRequest_*" class="com.smartchemical.usercenter.commonuser.DepositRequestAction" method="{1}">
+			<result name="success" type="redirectAction">
+				<param name="actionName">DepositRequestManagement_allRequest</param>
+			</result>
+			<interceptor-ref name="myAutoLogin"/>
+			<interceptor-ref name="myAuthCommon"/>
+        </action>
+		
+		<!-- 手机端访问的action定义 -->
+		<action name="MainpageMobile" class="com.smartchemicalmobile.frame.MainpageMobileAction">
+			<result name="success">/jsp/mobile/mobile_mainpage.jsp</result>
+		</action>
+    </package>
+</struts>
